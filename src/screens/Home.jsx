@@ -76,11 +76,11 @@ function Home() {
     pauseOnFocus: false, // focus시 정지
     pauseOnHover: false, // hover시 정지
     infinite: true,
-    speed: 1500,
+    speed: 1000,
     slidesToScroll: 4,
-    slidesToShow: 4,
+    slidesToShow: 6,
     autoplay: true, // 자동 캐러셀
-    autoplaySpeed: 2000, // 자동 캐러셀 속도
+    autoplaySpeed: 1500, // 자동 캐러셀 속도
     responsive: [
       // 반응형 옵션
       {
@@ -104,17 +104,19 @@ function Home() {
   return (
     <div className="">
       {/* section1. 메인 */}
-      <div className="bg-[#f4f4f4] relative h-[50vh] lg:h-[77vh]">
-        <img className="w-full" src={bg1} alt="Cowithone" />
+      <div className="relative ">
+        <img className="w-full h-max" src={bg1} alt="Cowithone" />
         <div>
-          <h1 className="absolute top-[50px] md:top-[58px] lg:top-[68px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[28px] md:text-[41px] lg:text-[52px]  ">
+          <h1 className="absolute top-[40px] md:top-[66px] lg:top-[88px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[20px] md:text-[32px] lg:text-[48px]  ">
             IoT 기술로 <br /> 지하시설물 관리를 혁신합니다
           </h1>
-          {/* <h3 className="absolute top-[68px] md:top-[96px] lg:top-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center  text-[12px] md:text-[16px] lg:text-[22px] ">
-            실시간으로 지하시설물을 모니터링 할 수 있어 더욱 안전합니다
-          </h3> */}
           <img
-            className="absolute top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  w-8/12 "
+            className="absolute  bottom-0 left-1/2 -translate-x-1/2  w-full "
+            src={frame}
+            alt="frame"
+          />
+          <img
+            className="absolute opacity-90 top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  w-8/12 "
             src={undercityCapture}
             alt="Cowithone"
           />
@@ -128,7 +130,7 @@ function Home() {
         <div></div>
       </div> */}
       {/* section2  solution */}
-      <div className=" bg-[#f4f4f4] pb-10 lg:pb-20 pt-12 md:pt-44 lg:pt-60">
+      <div className=" bg-[#f4f4f4] pb-10 lg:pb-20 pt-24 md:pt-44 lg:pt-60">
         <div>
           <div className="px-[20px] lg:px-52 text-[18px] lg:text-[30px] text-[#232976] font-semibold">
             솔루션
@@ -154,7 +156,7 @@ function Home() {
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-between ">
-            <div className="flex flex-col flex-1 lg:pt-6 lg:order-last ">
+            <div className=" pl-[20px] lg:pl-0 flex flex-col flex-1 lg:pt-6 lg:order-last ">
               <div className="text-[16px] lg:text-[20px] font-semibold text-[#232976] ">
                 STS (파손 예방 및 지방침하 예방 시스템){" "}
               </div>
@@ -272,8 +274,11 @@ function Home() {
         </div>
       </div>
       {/* section4. logo */}
-      <div className="px-1 lg:px-72 pb-16">
-        <Slider
+      <div className="px-1 lg:px-8 pb-16">
+        <div className="font-bold text-center text-[28px] lg:text-[44px] pb-2">
+          PARTNER
+        </div>
+        {/* <Slider
           {...settings_text}
           className="flex text-center text-[20px] font-bold lg:text-[30px] pb-6"
         >
@@ -282,9 +287,14 @@ function Home() {
           <div>건설사</div>
           <div>엔지니어링사</div>
           <div>협력업체</div>
-        </Slider>
+        </Slider> */}
+        <div className="text-center pb-4">
+          전국 다양한 기관 및 업체에서 사용중입니다.
+        </div>
 
-        <Slider {...settings} className=" ">
+        {/* logo 슬라이드 */}
+
+        <Slider {...settings} className="">
           <div>
             <img
               src={loc_namyangju}
@@ -426,9 +436,6 @@ function Home() {
             />
           </div>
         </Slider>
-        <div className="pt-8 text-center">
-          전국 다양한 기관 및 업체에서 사용중입니다.
-        </div>
       </div>
       {/* <div className="flex flex-col pb-10 lg:pb-24 text-center">
         <div className="px-[20px] lg:px-72  font-semibold text-[30px] lg:text-[40px]">

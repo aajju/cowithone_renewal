@@ -138,7 +138,9 @@ function Solution() {
         </div>
         <div className="pt-[40px] flex ">
           <button className="text-[16px] mx-auto lg:text-[20px] font-medium py-3  px-4 border  border-transparent rounded-md shadow-sm   text-white bg-[#232976] hover:bg-[#0713c0] ">
-            제품 카탈로그 다운로드
+            <a href="https://cowithone.hanbiro.net/cgi-bin/cloudGetLink.cgi?id=1644&key=79c5741a5941b8873f77bf539afb6b07">
+              제품 카탈로그 다운로드
+            </a>
           </button>
         </div>
         <div className="py-14">
@@ -337,7 +339,7 @@ function Solution() {
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
             </div>
-            <div className="px-4 pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
+            <div className=" h-[80px] px-4 pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               지하시설물의 상태 데이터를 서버로 전송
               <br className="hidden lg:block" /> (외부 전원 사용)
             </div>
@@ -356,7 +358,7 @@ function Solution() {
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
             </div>
-            <div className="px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
+            <div className=" h-[80px]  px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               지하시설물의 이벤트(파손,누수,지반침하)를 감지함
               <br className="hidden lg:block" />
               (태양광 사용)
@@ -376,7 +378,7 @@ function Solution() {
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
             </div>
-            <div className="px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
+            <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               매설관 30~50cm 위에 설치하며,
               <br className="hidden lg:block" /> 지하시설물의 관파손을 예방
             </div>
@@ -395,7 +397,7 @@ function Solution() {
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #STS
             </div>
-            <div className="px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
+            <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               초기 지반침하를 탐지하여,
               <br className="hidden lg:block" /> 대형재난을 사전에 예방
             </div>
@@ -414,7 +416,7 @@ function Solution() {
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #PSPS
             </div>
-            <div className="px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
+            <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               관 외면에 부착하여
               <br className="hidden lg:block" /> 누수센서와 이벤트 감지장치를
               연결
@@ -434,7 +436,7 @@ function Solution() {
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #PSPS
             </div>
-            <div className="px-4 pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
+            <div className=" h-[80px] px-4 pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               이음부에서 발생하는 누수를 감지
             </div>
           </div>
