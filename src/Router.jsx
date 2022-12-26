@@ -7,37 +7,44 @@ import Result from "./screens/Result";
 import Faq from "./screens/Faq";
 import Contact from "./screens/Contact";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "",
-        element: <Home />,
-      },
-      {
-        path: "solution",
-        element: <Solution />,
-      },
-      {
-        path: "customer",
-        element: <Customer />,
-      },
-      {
-        path: "result",
-        element: <Result />,
-      },
-      {
-        path: "faq",
-        element: <Faq />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
-    ],
-  },
-]);
+// createBrowserRouter(routes, {
+//   basename: "/app",
+// });
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      // path: `${process.env.PUBLIC_URL}/`,
+      element: <Root />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "solution",
+          element: <Solution />,
+        },
+        {
+          path: "customer",
+          element: <Customer />,
+        },
+        {
+          path: "result",
+          element: <Result />,
+        },
+        {
+          path: "faq",
+          element: <Faq />,
+        },
+        {
+          path: "contact",
+          element: <Contact />,
+        },
+      ],
+    },
+  ],
+  { basename: `${process.env.PUBLIC_URL}/` }
+);
 
 export default router;
