@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cowithone_renewal/static/css/main.adb33659.css",
-    "main.js": "/cowithone_renewal/static/js/main.d814018d.js",
+    "main.js": "/cowithone_renewal/static/js/main.e68c9c95.js",
     "static/media/NotoSansKR-Bold.otf": "/cowithone_renewal/static/media/NotoSansKR-Bold.77fb515ff22f676d50fb.otf",
     "static/media/NotoSansKR-Medium.otf": "/cowithone_renewal/static/media/NotoSansKR-Medium.9332e36e03e67737c6f1.otf",
     "static/media/NotoSansKR-Regular.otf": "/cowithone_renewal/static/media/NotoSansKR-Regular.8918c6411881646fdcfc.otf",
@@ -33,10 +33,10 @@
     "static/media/slick.woff": "/cowithone_renewal/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cowithone_renewal/index.html",
     "main.adb33659.css.map": "/cowithone_renewal/static/css/main.adb33659.css.map",
-    "main.d814018d.js.map": "/cowithone_renewal/static/js/main.d814018d.js.map"
+    "main.e68c9c95.js.map": "/cowithone_renewal/static/js/main.e68c9c95.js.map"
   },
   "entrypoints": [
     "static/css/main.adb33659.css",
-    "static/js/main.d814018d.js"
+    "static/js/main.e68c9c95.js"
   ]
 }
