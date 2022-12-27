@@ -15,7 +15,7 @@ function Solution() {
     <div>
       {/* section1. 메인 */}
       <div className="relative ">
-        <img className="w-full h-max" src={bg1} alt="Cowithone" />
+        <img className="w-full" src={bg1} alt="Cowithone" />
         <div>
           <h1 className="absolute top-[30px] md:top-[47px] lg:top-[68px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[20px] md:text-[34px] lg:text-[52px]  ">
             지하시설물 실시간 모니터링 시스템

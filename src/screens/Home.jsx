@@ -21,7 +21,7 @@ import eng_dohwa from "../assets/img/partner/eng_dohwa.png";
 import eng_yooshin from "../assets/img/partner/eng_yooshin.png";
 import etc_becs from "../assets/img/partner/etc_becs.png";
 import etc_corel from "../assets/img/partner/etc_corel.png";
-import etc_youngpoong from "../assets/img/partner/etc_youngpoong.png";
+import etc_youngpoong from "../assets/img/partner/etc_youngpoong.jpeg";
 import pub_lh from "../assets/img/partner/pub_lh.png";
 import pub_hydro from "../assets/img/partner/pub_hydro.png";
 import pub_krclean from "../assets/img/partner/pub_krclean.png";
@@ -105,7 +105,7 @@ function Home() {
     <div className="">
       {/* section1. 메인 */}
       <div className="relative ">
-        <img className="w-full h-max" src={bg1} alt="Cowithone" />
+        <img className="w-full" src={bg1} alt="Cowithone" />
         <div>
           <h1 className="absolute top-[40px] md:top-[66px] lg:top-[88px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[20px] md:text-[32px] lg:text-[48px]  ">
             IoT 기술로 <br /> 지하시설물 관리를 혁신합니다

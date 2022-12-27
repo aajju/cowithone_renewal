@@ -14,7 +14,7 @@ import eng_dohwa from "../assets/img/partner/eng_dohwa.png";
 import eng_yooshin from "../assets/img/partner/eng_yooshin.png";
 import etc_becs from "../assets/img/partner/etc_becs.png";
 import etc_corel from "../assets/img/partner/etc_corel.png";
-import etc_youngpoong from "../assets/img/partner/etc_youngpoong.png";
+import etc_youngpoong from "../assets/img/partner/etc_youngpoong.jpeg";
 import pub_lh from "../assets/img/partner/pub_lh.png";
 import pub_hydro from "../assets/img/partner/pub_hydro.png";
 import pub_krclean from "../assets/img/partner/pub_krclean.png";

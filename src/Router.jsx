@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, useRouteError, Navigate } from "react-router-dom";
 import Home from "./screens/Home";
 import Root from "./Root";
 import Solution from "./screens/Solution";
@@ -42,9 +42,22 @@ const router = createBrowserRouter(
           element: <Contact />,
         },
       ],
+      errorElement: <Navigate to="/"></Navigate>,
     },
+    // {
+    //   path: "/abc",
+    //   element: <Navigate to="/"></Navigate>,
+    // },
   ],
-  { basename: `${process.env.PUBLIC_URL}/` }
+  { basename: `${process.env.PUBLIC_URL}` }
 );
+
+// function ErrorBoundary() {
+//   let error = useRouteError();
+//   console.error(error);
+
+//   // Uncaught ReferenceError: path is not defined
+//   return <Navigate to="/"></Navigate>;
+// }
 
 export default router;
