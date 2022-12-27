@@ -125,7 +125,7 @@ function Solution() {
         </div>
       </div>
       {/* section4 */}
-      <div className="h-[1100px] lg:h-[1500px] bg-[#F9FAFB]  lg:block  px-[20px]  ">
+      <div className="h-[1100px] lg:h-[1600px] bg-[#F9FAFB]  lg:block  px-[20px] ">
         <div className="pt-12 lg:pt-24">
           <h1 className="font-bold text-[22px] lg:text-[32px] text-center">
             우리 회사에 알맞는 솔루션은?
@@ -145,7 +145,7 @@ function Solution() {
         </div>
         <div className="py-14">
           <div className="overflow-x-auto">
-            <table className="table-auto w-[400px] lg:w-9/12 mx-auto border-l border-t">
+            <table className="table-auto w-[400px] lg:w-[880px] mx-auto border-l border-t">
               <thead className="border-b">
                 <tr className="bg-gray-300 font-bold text-[16px] lg:text-[20px] ">
                   <th className="text-center  border-r"></th>
@@ -320,11 +320,11 @@ function Solution() {
         </div>
       </div>
       {/* section5 구성품 */}
-      <div className="py-14 px-[20px] lg:w-[1200px] mx-auto">
+      <div className="py-14 px-[20px] lg:py-[100px] lg:w-[1200px] mx-auto">
         <div className="text-center text-[#232976] font-semibold text-[20px] lg:text-[24px] ">
           구성품
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-10  pt-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-10  pt-16">
           <div className="m-auto ">
             <div className="relative mx-auto h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px]  ring-2 ring-[#23297633] rounded-full">
               <img

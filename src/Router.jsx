@@ -7,9 +7,6 @@ import Result from "./screens/Result";
 import Faq from "./screens/Faq";
 import Contact from "./screens/Contact";
 
-// createBrowserRouter(routes, {
-//   basename: "/app",
-// });
 const router = createBrowserRouter(
   [
     {
@@ -45,7 +42,7 @@ const router = createBrowserRouter(
       errorElement: <Navigate to="/"></Navigate>,
     },
     // {
-    //   path: "/abc",
+    //   path: "/*",
     //   element: <Navigate to="/"></Navigate>,
     // },
   ],
