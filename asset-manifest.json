@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cowithone_renewal/static/css/main.c25ffe8f.css",
-    "main.js": "/cowithone_renewal/static/js/main.dcd5e18e.js",
+    "main.js": "/cowithone_renewal/static/js/main.4a31fe11.js",
     "static/media/NotoSansKR-Bold.otf": "/cowithone_renewal/static/media/NotoSansKR-Bold.77fb515ff22f676d50fb.otf",
     "static/media/NotoSansKR-Medium.otf": "/cowithone_renewal/static/media/NotoSansKR-Medium.9332e36e03e67737c6f1.otf",
     "static/media/NotoSansKR-Regular.otf": "/cowithone_renewal/static/media/NotoSansKR-Regular.8918c6411881646fdcfc.otf",
@@ -19,8 +19,10 @@
     "static/media/frame.png": "/cowithone_renewal/static/media/frame.d43945596de0ff464664.png",
     "static/media/Rectangle 70.png": "/cowithone_renewal/static/media/Rectangle 70.f0e5a6b203e98c0a3e52.png",
     "static/media/pub_hydro.png": "/cowithone_renewal/static/media/pub_hydro.091d35292507d4f021b5.png",
+    "static/media/eng_dmcm.png": "/cowithone_renewal/static/media/eng_dmcm.bb60d44d8b8d31174f2c.png",
     "static/media/pub_kwater.png": "/cowithone_renewal/static/media/pub_kwater.42b599fb72fa5bdc5237.png",
     "static/media/con_kukdong.png": "/cowithone_renewal/static/media/con_kukdong.6dab7c1dbd032212dbed.png",
+    "static/media/etc_youngpoong.jpeg": "/cowithone_renewal/static/media/etc_youngpoong.de610c236d43dc99c3ae.jpeg",
     "static/media/etc_corel.png": "/cowithone_renewal/static/media/etc_corel.de1a060f8456f4b36b59.png",
     "static/media/loc_seongnam.png": "/cowithone_renewal/static/media/loc_seongnam.2431075d1081741d857d.png",
     "static/media/con_taeyoung.png": "/cowithone_renewal/static/media/con_taeyoung.5dc53dcaa28b581322dd.png",
@@ -33,10 +35,10 @@
     "static/media/slick.woff": "/cowithone_renewal/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cowithone_renewal/index.html",
     "main.c25ffe8f.css.map": "/cowithone_renewal/static/css/main.c25ffe8f.css.map",
-    "main.dcd5e18e.js.map": "/cowithone_renewal/static/js/main.dcd5e18e.js.map"
+    "main.4a31fe11.js.map": "/cowithone_renewal/static/js/main.4a31fe11.js.map"
   },
   "entrypoints": [
     "static/css/main.c25ffe8f.css",
-    "static/js/main.dcd5e18e.js"
+    "static/js/main.4a31fe11.js"
   ]
 }
