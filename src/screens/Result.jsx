@@ -939,8 +939,8 @@ function Result() {
               </table>
             </div>
             {/* for mobile table */}
-            <div className="overflow-x-auto  lg:hidden">
-              <table className="table-auto mx-[10px] border-l border-t shadow  ">
+            <div className="overflow-x-auto px-[20px] lg:hidden">
+              <table className="table-auto w-full lg:w-full mx-auto border-l border-t  shadow  ">
                 <thead className="border-b">
                   <tr className="bg-[#232976] text-gray-300 font-bold text-[12px] lg:text-[18px] ">
                     <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
@@ -1206,8 +1206,8 @@ function Result() {
                 </table>
               </div>
               {/* for mobile table */}
-              <div className="overflow-x-auto  lg:hidden">
-                <table className="table-auto mx-[10px] border-l border-t shadow  ">
+              <div className="overflow-x-auto px-[20px] lg:hidden">
+                <table className="table-auto w-full lg:w-full mx-auto border-l border-t  shadow  ">
                   <thead className="border-b">
                     <tr className="bg-[#232976] text-gray-300 font-bold text-[12px]">
                       <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left w-2/5">
@@ -1544,8 +1544,8 @@ function Result() {
               </table>
             </div>
             {/* for mobile table */}
-            <div className="overflow-x-auto  lg:hidden">
-              <table className="table-auto mx-[10px] border-l border-t shadow  ">
+            <div className="overflow-x-auto  lg:hidden px-[20px]">
+              <table className="table-auto w-full lg:w-full mx-auto border-l border-t  shadow  ">
                 <thead className="border-b">
                   <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
                     <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">

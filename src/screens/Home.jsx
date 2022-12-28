@@ -40,38 +40,40 @@ import bg1 from "../assets/img/solution/Rectangle 70.png";
 import undercityCapture from "../assets/img/solution/undercity.png";
 
 function Home() {
-  const settings_text = {
-    dots: false,
-    infinite: true,
-    speed: 1500,
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    autoplay: true, // 자동 캐러셀
-    autoplaySpeed: 2000, // 자동 캐러셀 속도
-    draggable: false, // 드래그
-    pauseOnFocus: false, // focus시 정지
-    pauseOnHover: false, // hover시 정지
-    responsive: [
-      // 반응형 옵션
-      {
-        breakpoint: 1024, // (숫자)px 이하일 경우
-        settings: {
-          infinite: true,
-          draggable: false, // 드래그
-          pauseOnFocus: false, // focus시 정지
-          pauseOnHover: false, // hover시 정지
-          speed: 500,
-          slidesToScroll: 1,
-          slidesToShow: 1,
-          dots: false,
-          autoplay: true, // 자동 캐러셀
-          autoplaySpeed: 3050, // 자동 캐러셀 속도
-        },
-      },
-    ],
-  };
+  // const settings_text = {
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 1500,
+  //   slidesToScroll: 1,
+  //   slidesToShow: 1,
+  //   autoplay: true, // 자동 캐러셀
+  //   autoplaySpeed: 2000, // 자동 캐러셀 속도
+  //   draggable: false, // 드래그
+  //   pauseOnFocus: false, // focus시 정지
+  //   pauseOnHover: false, // hover시 정지
+  //   responsive: [
+  //     // 반응형 옵션
+  //     {
+  //       breakpoint: 1024, // (숫자)px 이하일 경우
+  //       settings: {
+  //         infinite: true,
+  //         draggable: false, // 드래그
+  //         pauseOnFocus: false, // focus시 정지
+  //         pauseOnHover: false, // hover시 정지
+  //         speed: 500,
+  //         slidesToScroll: 1,
+  //         slidesToShow: 1,
+  //         dots: false,
+  //         autoplay: true, // 자동 캐러셀
+  //         autoplaySpeed: 3050, // 자동 캐러셀 속도
+  //       },
+  //     },
+  //   ],
+  // };
   const settings = {
     dots: false,
+    // centerMode: true,
+
     draggable: false, // 드래그
     pauseOnFocus: false, // focus시 정지
     pauseOnHover: false, // hover시 정지
@@ -86,13 +88,14 @@ function Home() {
       {
         breakpoint: 1024, // (숫자)px 이하일 경우
         settings: {
+          // centerMode: true,
           infinite: true,
           draggable: false, // 드래그
           pauseOnFocus: false, // focus시 정지
           pauseOnHover: false, // hover시 정지
           speed: 500,
-          slidesToScroll: 2,
-          slidesToShow: 2,
+          slidesToScroll: 3,
+          slidesToShow: 3,
           arrows: true, // 좌,우 버튼
           dots: false,
           autoplay: true, // 자동 캐러셀
@@ -294,7 +297,7 @@ function Home() {
 
         {/* logo 슬라이드 */}
 
-        <Slider {...settings} className="">
+        <Slider {...settings} className="px-[20px] ">
           <div>
             <img
               src={loc_namyangju}
