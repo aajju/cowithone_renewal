@@ -9,6 +9,7 @@ import presheet from "../assets/img/solution/presheet.png";
 import sinkball from "../assets/img/solution/sinkball.png";
 import smartsheet from "../assets/img/solution/smartsheet.png";
 import sensor from "../assets/img/solution/sensor.png";
+import MyImage from "../libs/MyImage";
 
 function Solution() {
   return (
@@ -55,11 +56,11 @@ function Solution() {
             </div>
           </div>
           <div className="flex flex-col space-y-4">
-            <img
+            {/* <MyImage
+              image={<img src={bps} alt="bps" />}
               className="w-full lg:w-4/6  mx-auto"
-              src={bps}
-              alt="Cowithone"
-            />
+            /> */}
+            <img className="w-full lg:w-4/6  mx-auto" src={bps} alt="bps" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
               구성품 : RM-5000, RM-4000*, 스마트 예방시트 <br /> (RM-4000의 경우
               시공 길이가 1.5km이상인 경우에 필요)
@@ -81,11 +82,7 @@ function Solution() {
             </div>
           </div>
           <div className="flex flex-col space-y-4">
-            <img
-              className="w-full lg:w-4/6  mx-auto"
-              src={sts}
-              alt="Cowithone"
-            />
+            <img className="w-full lg:w-4/6  mx-auto" src={sts} alt="sts" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
               구성품 : RM-5000, RM-4000*, 스마트 예방시트,
               <strong className="text-[#4850c9]"> 싱크볼</strong> <br />
@@ -109,11 +106,7 @@ function Solution() {
             </div>
           </div>
           <div className="flex flex-col space-y-4">
-            <img
-              className="w-full lg:w-4/6  mx-auto"
-              src={psps}
-              alt="Cowithone"
-            />
+            <img className="w-full lg:w-4/6  mx-auto" src={psps} alt="psps" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
               구성품 : RM-5000, RM-4000*, 스마트 예방시트, <br />
               <strong className="text-[#4850c9]">

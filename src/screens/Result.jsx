@@ -182,7 +182,7 @@ function Result() {
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r">시흥 광역상수도</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">광역상수도</td>
@@ -206,7 +206,7 @@ function Result() {
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">오수압송</td>
@@ -214,7 +214,7 @@ function Result() {
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     한국수력원자력
                   </td>
@@ -222,37 +222,37 @@ function Result() {
                     울진 원자력발전소
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r ">해수취수관</td>
-                  <td className="px-2 px-2 lg:p-4 py-2  border-r">
+                  <td className="px-2 lg:p-4 py-2  border-r">
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white   ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     남양주시
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">남양주 조안면</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">하수 압송관</td>
-                  <td className="px-2 px-2 lg:p-4 py-2  border-r">
+                  <td className="px-2 lg:p-4 py-2  border-r">
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     송파구청
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">송파구</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">하천유지용수</td>
-                  <td className="px-2 px-2 lg:p-4 py-2  border-r">
+                  <td className="px-2 lg:p-4 py-2  border-r">
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     한국농어촌공사
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">수원 이목지구</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">상수도</td>
-                  <td className="px-2 px-2 lg:p-4 py-2  border-r">
+                  <td className="px-2 lg:p-4 py-2  border-r">
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
@@ -312,7 +312,7 @@ function Result() {
                     광역상수도
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r">시흥 광역상수도</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">광역상수도</td>
@@ -330,12 +330,12 @@ function Result() {
                     농업용수
                   </td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">오수압송</td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     한국수력원자력
                   </td>
@@ -344,21 +344,21 @@ function Result() {
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r ">해수취수관</td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     남양주시
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">남양주 조안면</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">하수 압송관</td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     송파구청
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">송파구</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">하천유지용수</td>
                 </tr>
-                <tr className="border-b bg-white ">
+                <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     한국농어촌공사
                   </td>
@@ -523,7 +523,7 @@ function Result() {
       </div>
       {/* section4. 기타실적 */}
       <div className="bg-[#f4f4f4] py-10 lg:py-24">
-        <div className=" ">
+        <div>
           <div>
             <div className="px-[20px] lg:px-72 font-semibold text-[30px] lg:text-[40px]">
               특허 실적
@@ -706,7 +706,7 @@ function Result() {
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
-                  <tr className="border-b bg-white odd:bg-gray-100">
+                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                       특허
                     </td>
@@ -717,7 +717,7 @@ function Result() {
                       배관재의 누수와 파손감지 및 관로 위치확인이 용이한 감지관
                     </td>
                   </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100">
+                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                       특허
                     </td>
@@ -1267,17 +1267,18 @@ function Result() {
           </div>
         </div>
       </div>
-      <div className="px-[20px] lg:px-72  py-10 lg:py-24">
+
+      <div className="py-10 lg:py-24 ">
         <div>
           <div>
-            <div className="font-semibold text-[30px] lg:text-[40px]">
+            <div className="px-[20px] lg:px-72 font-semibold text-[30px] lg:text-[40px]">
               기타 실적
             </div>
             {/* <div className="text-[16px] lg:text-[28px] pt-2 text-gray-500">
               혁신제품 인증 2건, 대통령상 포함 00건 수상
             </div> */}
           </div>
-          <div className="py-6 lg:py-10">
+          <div className="py-6 lg:py-10 px-[20px] lg:w-[1100px] lg:mx-auto ">
             <Slider {...settings} className=" ">
               <div>
                 <img
@@ -1385,245 +1386,269 @@ function Result() {
                 />
               </div>
             </Slider>
-          </div>{" "}
+          </div>
           <div className="font-normal text-[20px] lg:text-[28px] lg:pt-10 text-center">
             수상 및 인증
           </div>
-          <div className="text-[14px] lg:text-[16px] text-gray-500 text-center pb-6">
+          <div className="text-[14px] lg:text-[16px] text-gray-500 text-center">
             혁신제품 인증 2건 및 대통령상 포함 10건의 수상 실적!
           </div>
-          {/* for PC table */}
-          <div className="overflow-x-auto hidden  lg:block">
-            <table className="table-auto w-[500px] lg:w-[880px]  border-l border-t mx-auto shadow  ">
-              <thead className="border-b">
-                <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
-                  <th className="pl-2 lg:pl-4 border-r text-left">구분</th>
-                  <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                    내용
-                  </th>
-                  <th className="pl-2 lg:pl-4 border-r text-left">주관기관</th>
-                </tr>
-              </thead>
-              <tbody className="text-[12px] lg:text-[16px]">
-                <tr className="border-b bg-white odd:bg-gray-100 ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    인증
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    혁신제품 (상하수도관로 파손예방 및 누수감지 시스템)
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">환경부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    인증
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    혁신제품 (싱크홀을 예방하는 AR기술을 접목한 SinkTree시스템)
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">중소벤처기업부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    인증
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">ISO 9001:2015</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">
-                    한국국제규격인증원
-                  </td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    인증
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">ISO 14001:2015</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">
-                    한국국제규격인증원
-                  </td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    인증
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    우수발명품 우선구매선정
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국발명진흥회</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">특허청 표창장</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">특허청</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    한국방재협회 표창장
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국방재협회</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">대통령상</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">행정자치부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    대한민국 우수특허 대상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국일보</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    물관리 녹색기술상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국환경공단</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    국민안전처 표창장
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">국민안전처</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    스마트시티 비즈니스페어 장관상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">국토교통부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    경기도 안전산업육성오디션 우수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">경기도</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    대한민국환경대상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">산업통상자원부</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          {/* for mobile table */}
-          <div className="overflow-x-auto  lg:hidden">
-            <table className="table-auto   border-l border-t  shadow  ">
-              <thead className="border-b">
-                <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
-                  <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                    내용
-                  </th>
-                  <th className="pl-2 lg:pl-4 border-r text-left">주관기관</th>
-                </tr>
-              </thead>
-              <tbody className="text-[12px] lg:text-[16px]">
-                <tr className="border-b bg-white odd:bg-gray-100 ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    혁신제품 (상하수도관로 파손예방 및 누수감지 시스템)
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">환경부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    혁신제품 (싱크홀을 예방하는 AR기술을 접목한 SinkTree시스템)
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">중소벤처기업부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">ISO 9001:2015</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">
-                    한국국제규격인증원
-                  </td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">ISO 14001:2015</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">
-                    한국국제규격인증원
-                  </td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    우수발명품 우선구매선정
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국발명진흥회</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">특허청 표창장</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">특허청</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    한국방재협회 표창장
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국방재협회</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">대통령상</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">행정자치부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    대한민국 우수특허 대상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국일보</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    물관리 녹색기술상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">한국환경공단</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    국민안전처 표창장
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">국민안전처</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    스마트시티 비즈니스페어 장관상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">국토교통부</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    경기도 안전산업육성오디션 우수상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">경기도</td>
-                </tr>
-                <tr className="border-b bg-white ">
-                  <td className="px-2 py-2 lg:p-4 border-r">
-                    대한민국환경대상
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">산업통상자원부</td>
-                </tr>
-              </tbody>
-            </table>
+          <div className="py-6 lg:py-10">
+            {/* for PC table */}
+            <div className="overflow-x-auto hidden  lg:block">
+              <table className="table-auto lg:w-[1000px]  border-l border-t  mx-auto shadow  ">
+                <thead className="border-b">
+                  <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
+                    <th className="pl-2 lg:pl-4 border-r text-left">구분</th>
+                    <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
+                      내용
+                    </th>
+                    <th className="pl-2 lg:pl-4 border-r text-left">
+                      주관기관
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-[12px] lg:text-[16px]">
+                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100 ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      인증
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      혁신제품 (상하수도관로 파손예방 및 누수감지 시스템)
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">환경부</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      인증
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      혁신제품 (싱크홀을 예방하는 AR기술을 접목한
+                      SinkTree시스템)
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      중소벤처기업부
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      인증
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">ISO 9001:2015</td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      한국국제규격인증원
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      인증
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      ISO 14001:2015
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      한국국제규격인증원
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      인증
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      우수발명품 우선구매선정
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      한국발명진흥회
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">특허청 표창장</td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">특허청</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      한국방재협회 표창장
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">한국방재협회</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">대통령상</td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">행정자치부</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      대한민국 우수특허 대상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">한국일보</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      물관리 녹색기술상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">한국환경공단</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      국민안전처 표창장
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">국민안전처</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      스마트시티 비즈니스페어 장관상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">국토교통부</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      경기도 안전산업육성오디션 우수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">경기도</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      대한민국환경대상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      산업통상자원부
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            {/* for mobile table */}
+            <div className="overflow-x-auto  lg:hidden">
+              <table className="table-auto mx-[10px] border-l border-t shadow  ">
+                <thead className="border-b">
+                  <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
+                    <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
+                      내용
+                    </th>
+                    <th className="pl-2 lg:pl-4 border-r text-left">
+                      주관기관
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="text-[12px] lg:text-[16px]">
+                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100 ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      혁신제품 (상하수도관로 파손예방 및 누수감지 시스템)
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">환경부</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      혁신제품 (싱크홀을 예방하는 AR기술을 접목한
+                      SinkTree시스템)
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      중소벤처기업부
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">ISO 9001:2015</td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      한국국제규격인증원
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      ISO 14001:2015
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      한국국제규격인증원
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      우수발명품 우선구매선정
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      한국발명진흥회
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">특허청 표창장</td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">특허청</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      한국방재협회 표창장
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">한국방재협회</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">대통령상</td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">행정자치부</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      대한민국 우수특허 대상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">한국일보</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      물관리 녹색기술상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">한국환경공단</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      국민안전처 표창장
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">국민안전처</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      스마트시티 비즈니스페어 장관상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">국토교통부</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      경기도 안전산업육성오디션 우수상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">경기도</td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      대한민국환경대상
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      산업통상자원부
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
