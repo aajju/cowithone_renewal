@@ -143,7 +143,7 @@ function Result() {
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">상수도</td>
                   <td className="px-2 lg:p-4 py-2  border-r border-b">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    BPS (파손 예방 시스템){" "}
                   </td>
                 </tr>
                 <tr className="bg-white ">
@@ -155,7 +155,8 @@ function Result() {
                     상수도, 하수도
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    PSPS (파손 예방 및 누수감지 시스템),
+                    <br /> STS (지반 침하 예방 시스템){" "}
                   </td>
                 </tr>
                 <tr className=" bg-white ">
@@ -167,7 +168,7 @@ function Result() {
                     공업용수
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    STS (지반 침하 예방 시스템){" "}
                   </td>
                 </tr>
                 <tr className="bg-white ">
@@ -179,7 +180,7 @@ function Result() {
                     광역상수도
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    STS (지반 침하 예방 시스템){" "}
                   </td>
                 </tr>
                 <tr className="border-b bg-white  ">
@@ -203,7 +204,7 @@ function Result() {
                     농업용수
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    LSS (누수감지 시스템){" "}
                   </td>
                 </tr>
                 <tr className="border-b bg-white  ">
@@ -223,7 +224,7 @@ function Result() {
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r ">해수취수관</td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    LSS (누수감지 시스템){" "}
                   </td>
                 </tr>
                 <tr className="border-b bg-white   ">
@@ -233,7 +234,7 @@ function Result() {
                   <td className="px-2 py-2 lg:p-4 border-r">남양주 조안면</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">하수 압송관</td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    LSS (누수감지 시스템){" "}
                   </td>
                 </tr>
                 <tr className="border-b bg-white odd:bg-gray-100  ">
@@ -378,7 +379,7 @@ function Result() {
         <div className="px-[20px] text-[18px] lg:text-[28px] text-gray-500 pt-2">
           다양한 파트너들과 협력하고 있습니다
         </div>
-        <div className="px-[4px] lg:px-44  pt-6 lg:pt-8 grid grid-cols-5  items-center  gap-4 gap-y-6 lg:gap-y-8  text-[12px] lg:text-[20px] ">
+        <div className="px-[4px] lg:px-44  pt-6 lg:pt-8 grid grid-cols-5  items-center  gap-8  text-[12px] lg:text-[20px] ">
           <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2 ">
             <div>
               <BuildingLibraryIcon className="w-5 h-5 lg:w-10 lg:h-10  mx-auto" />

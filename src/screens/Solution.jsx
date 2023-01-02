@@ -22,7 +22,12 @@ function Solution() {
             지하시설물 실시간 모니터링 시스템
           </h1>
           <h3 className="absolute top-[68px] md:top-[96px] lg:top-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center  text-[12px] md:text-[16px] lg:text-[22px] ">
-            실시간으로 지하시설물을 모니터링 할 수 있어 더욱 안전합니다
+            <color className="font-semibold text-rose-500">실시간</color>
+            으로&nbsp;
+            <color className="font-semibold text-rose-500">지하시설물</color>
+            을&nbsp;
+            <color className="font-semibold text-rose-500">모니터링</color> 할
+            수 있어 더욱 안전합니다
           </h3>
           <img
             className="absolute top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  w-8/12 "
@@ -34,7 +39,7 @@ function Solution() {
       {/* section2 */}
       <div className="h-[288px] lg:h-[488px] bg-[#F9FAFB] flex">
         <p className="pt-10 text-center text-[15px] md:text-[26px] m-auto lg:text-[32px] font-bold">
-          지하시설물은 땅 속에 있어 관리가 어렵기 때문에,
+          지하시설물은 땅 속에 있어 관리가 어려워,
           <br /> 유지비용이 많이 들고 국민의 안전을 위협합니다
         </p>
       </div>
@@ -50,7 +55,9 @@ function Solution() {
             </div>
             <div className="text-[13px] lg:text-[24px] pb-2">
               <ul className="list-none">
-                <li>- 관 파손 예방만으로 지하시설물 문제의 80%를 사전 예방 </li>
+                <li>
+                  - 관 파손 예방만으로도 지하시설물 문제의 80%를 사전 예방{" "}
+                </li>
                 <li>- 시공 및 유지보수 간편 </li>
               </ul>
             </div>
@@ -62,8 +69,7 @@ function Solution() {
             /> */}
             <img className="w-full lg:w-4/6  mx-auto" src={bps} alt="bps" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
-              구성품 : RM-5000, RM-4000*, 스마트 예방시트 <br /> (RM-4000의 경우
-              시공 길이가 1.5km이상인 경우에 필요)
+              구성품 : RM-5000, RM-4000, 스마트 예방시트
             </div>
           </div>
         </div>
@@ -84,9 +90,8 @@ function Solution() {
           <div className="flex flex-col space-y-4">
             <img className="w-full lg:w-4/6  mx-auto" src={sts} alt="sts" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
-              구성품 : RM-5000, RM-4000*, 스마트 예방시트,
-              <strong className="text-[#4850c9]"> 싱크볼</strong> <br />
-              (RM-4000의 경우 시공 길이가 1.5km이상인 경우에 필요)
+              구성품 : RM-5000, RM-4000, 스마트 예방시트,
+              <strong className="text-[#4850c9]">&nbsp;싱크볼</strong>
             </div>
           </div>
         </div>
@@ -101,18 +106,17 @@ function Solution() {
             <div className="text-[13px] lg:text-[24px] pb-2">
               <ul className="list-none">
                 <li>- 상수도를 가장 완벽하게 사용하는 방법</li>
-                <li>- 예방, 안전, 그리고 유지관리비를 잡았습니다</li>
+                <li>- 예방, 안전, 그리고 유지관리비를 최소화할 수 있습니다</li>
               </ul>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
             <img className="w-full lg:w-4/6  mx-auto" src={psps} alt="psps" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
-              구성품 : RM-5000, RM-4000*, 스마트 예방시트, <br />
+              구성품 : RM-5000, RM-4000, 스마트 예방시트,
               <strong className="text-[#4850c9]">
-                스마트시트, 누수센서 및 보호커버
+                &nbsp;스마트시트, 누수센서 및 보호커버
               </strong>
-              <br /> (RM-4000의 경우 시공 길이가 1.5km이상인 경우에 필요)
             </div>
           </div>
         </div>
@@ -251,7 +255,7 @@ function Solution() {
                     우수관
                   </td>
                   <td className="py-2 lg:p-4 border-r text-center">✔</td>
-                  <td className="py-2 lg:p-4 border-r text-center"></td>
+                  <td className="py-2 lg:p-4 border-r text-center">✔</td>
                   <td className="py-2 lg:p-4 text-center border-r"></td>
                 </tr>
                 <tr className="border-b ">
@@ -259,7 +263,7 @@ function Solution() {
                     중수도관
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
-                  <td className="py-2 lg:p-4  border-r text-center"></td>
+                  <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  text-center border-r"></td>
                 </tr>
                 <tr className="border-b ">
@@ -280,7 +284,7 @@ function Solution() {
                     난방관
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
-                  <td className="py-2 lg:p-4  border-r text-center"></td>
+                  <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  text-center border-r">✔</td>
                 </tr>
                 <tr className="border-b ">
@@ -288,7 +292,7 @@ function Solution() {
                     송유관
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
-                  <td className="py-2 lg:p-4  border-r text-center"></td>
+                  <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  text-center border-r">✔</td>
                 </tr>
                 <tr className="border-b ">
@@ -327,7 +331,7 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              이벤트 감지장치 (RM-5000)
+              감지장치 (RM-5000)
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
@@ -346,13 +350,13 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              이벤트 감지장치 (RM-4000)
+              감지장치 (RM-4000)
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
             </div>
             <div className=" h-[80px]  px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              지하시설물의 이벤트(파손,누수,지반침하)를 감지함
+              지하시설물의 이벤트(파손,누수,지반침하)를 감지
               <br className="hidden lg:block" />
               (태양광 사용)
             </div>
@@ -373,7 +377,7 @@ function Solution() {
             </div>
             <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               매설관 30~50cm 위에 설치하며,
-              <br className="hidden lg:block" /> 지하시설물의 관파손을 예방
+              <br className="hidden lg:block" /> 지하시설물의 파손을 예방
             </div>
           </div>
           <div className="m-auto ">
@@ -391,7 +395,7 @@ function Solution() {
               #STS
             </div>
             <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              초기 지반침하를 탐지하여,
+              초기 지반침하를 감지하여,
               <br className="hidden lg:block" /> 대형재난을 사전에 예방
             </div>
           </div>
@@ -411,8 +415,7 @@ function Solution() {
             </div>
             <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
               관 외면에 부착하여
-              <br className="hidden lg:block" /> 누수센서와 이벤트 감지장치를
-              연결
+              <br className="hidden lg:block" /> 누수센서와 감지장치를 연결
             </div>
           </div>{" "}
           <div className="m-auto ">

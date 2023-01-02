@@ -150,7 +150,7 @@ function Home() {
                 BPS (파손 예방 시스템)
               </div>
               <div className="text-[18px] lg:text-[24px] font-semibold  ">
-                관 파손 예방만으로 지하시설물 문제의 80%를 사전 예방할 수
+                관 파손 예방만으로도 지하시설물 문제의 80%를 사전 예방할 수
                 있습니다
               </div>
             </div>
@@ -164,8 +164,8 @@ function Home() {
                 STS (파손 예방 및 지방침하 예방 시스템){" "}
               </div>
               <div className="text-[18px] lg:text-[24px] font-semibold  ">
-                한 해 평균 지반침하(싱크홀) 약 260건
-                <br /> 초기에 감지하여 대형재난을 막습니다
+                연 평균 지반침하(싱크홀) 약 260건 발생.
+                <br /> 초기에 감지하여 대형재난을 막을 수 있습니다.
               </div>
             </div>
             <div className=" py-6 lg:pt-0 lg:pl-52  lg:w-2/3 ">
@@ -178,8 +178,8 @@ function Home() {
                 PSPS (파손 예방 및 누수 감지 시스템){" "}
               </div>
               <div className="text-[18px] lg:text-[24px] font-semibold  ">
-                실시간 누수 확인 및 누수 위치 확인.
-                <br /> 상하수도관을 가장 완벽하게 사용하세요.
+                실시간 누수 및 누수 위치 확인.
+                <br /> 상하수도관을 완벽하게 관리할 수 있습니다.
               </div>
             </div>
             <div className="flex-1 pt-6 lg:pt-0 ">
@@ -221,7 +221,7 @@ function Home() {
                 <div> - 턴키 {"&"} 비턴키 사업 설계 배점 강화</div>
               </div>
               <div>
-                <div className="font-semibold">턴키 사업</div>
+                <div className="font-semibold">턴키 등 사업</div>
                 <div>- 기술형 입찰심의 : 최소배점도입(7점)</div>
                 <div>- 스마트턴키 : 10~20점 배점</div>
               </div>
@@ -237,13 +237,13 @@ function Home() {
               <img className="object-fill " src={gover_home} alt="지자체" />
             </div>
             <div className="text-center pt-4 font-semibold text-[18px] lg:text-[20px]">
-              지자체(상하수도과, 교통과)
+              지자체(상하수도부서, 도로과)
             </div>
             <div className="flex flex-col pt-3 space-y-2 text-center pb-24 lg:pb-16">
               <div>
                 <div className="font-semibold">유지비용 절감</div>
                 <div> - 순회 비용 절감</div>
-                <div> - 원인불명 피해액 보상</div>
+                <div> - 복구비 원인자 부담</div>
                 <div> - (상수도) 누수 피해액 절감</div>
                 <div> - (하수도) 불명수 처리비용 절감</div>
                 <div> - 상하수도관 수명 연장 (약 150%)</div>
@@ -268,9 +268,9 @@ function Home() {
                 {" "}
                 <div className="font-semibold">광역상수도 (수자원공사)</div>
                 <div>- 광역상수도 관리를 위한 최고의 솔루션</div>
-                <div>- 가장 빠른 관로 위치 탐사</div>
+                <div>- 정확한 위치 탐사</div>
                 <div>- 관 파손 예방</div>
-                <div>- 가장 빠른 누수 탐지</div>
+                <div>- 신속한 누수 탐지</div>
               </div>
             </div>
           </div>
