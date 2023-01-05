@@ -11,7 +11,7 @@ function Contact() {
         <div className="space-y-1">
           <div className="text-[16px] lg:text-[20px]">이메일</div>
           <div className="text-[20px] lg:text-[24px] font-semibold">
-            000@cowithone.com
+            help@cowithone.com
           </div>
         </div>
         <div className="space-y-1">

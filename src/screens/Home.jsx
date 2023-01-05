@@ -38,6 +38,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import bg1 from "../assets/img/solution/Rectangle 70.png";
 import undercityCapture from "../assets/img/solution/undercity.png";
+import YouTube from "react-youtube";
 
 function Home() {
   // const settings_text = {
@@ -118,10 +119,39 @@ function Home() {
             src={frame}
             alt="frame"
           />
-          <img
+          {/* <img
             className="absolute opacity-90 top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  w-8/12 "
             src={undercityCapture}
             alt="Cowithone"
+          /> */}
+          <YouTube
+            className="hidden lg:block absolute opacity-90 top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2   "
+            videoId="VO4i7nEuWEA"
+            opts={{
+              width: "800",
+              height: "450",
+              playerVars: {
+                autoplay: 0,
+              },
+            }}
+            onEnd={(e) => {
+              e.target.stopVideo(0);
+            }}
+          />
+
+          <YouTube
+            className=" lg:hidden absolute opacity-90 top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  "
+            videoId="VO4i7nEuWEA"
+            opts={{
+              width: "320",
+              height: "180",
+              playerVars: {
+                autoplay: 0,
+              },
+            }}
+            onEnd={(e) => {
+              e.target.stopVideo(0);
+            }}
           />
         </div>
       </div>
@@ -132,8 +162,23 @@ function Home() {
         <div></div>
         <div></div>
       </div> */}
+      {/* <div>
+        <YouTube
+          videoId="VO4i7nEuWEA"
+          opts={{
+            width: "500",
+            height: "315",
+            playerVars: {
+              autoplay: 0,
+            },
+          }}
+          onEnd={(e) => {
+            e.target.stopVideo(0);
+          }}
+        />
+      </div> */}
       {/* section2  solution */}
-      <div className=" bg-[#f4f4f4] pb-10 lg:pb-20 pt-24 md:pt-44 lg:pt-60">
+      <div className=" bg-[#f4f4f4] pb-10 lg:pb-20 pt-36">
         <div>
           <div className="px-[20px] lg:px-52 text-[18px] lg:text-[30px] text-[#232976] font-semibold">
             솔루션

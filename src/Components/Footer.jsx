@@ -13,7 +13,7 @@ function Footer() {
         <h6 className="font-bold">고객센터</h6>
         <div className="space-y-1 text-[14px] lg:text-[16px] pt-1">
           <h6>전화 : 031-212-5565</h6>
-          <h6>이메일 : ㅇㅇㅇ@cowithone.com</h6>
+          <h6>이메일 : help@cowithone.com</h6>
         </div>
       </div>
       <div className="text-[12px] lg:text-[14px] text-center">

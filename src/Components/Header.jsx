@@ -38,8 +38,8 @@ function Header() {
             <Link to={"/solution"}>솔루션</Link>
             {/* <Link to={"/customer"}>주요고객</Link> */}
             <Link to={"/result"}>실적</Link>
-            <Link to={"/faq"}>자주묻는질문</Link>
-            <Link to={"/contact"}>문의하기</Link>
+            <Link to={"/faq"}>FAQ</Link>
+            <Link to={"/contact"}>Contact</Link>
           </div>
 
           {/* mobile menu */}
@@ -111,14 +111,14 @@ function Header() {
             to={"/faq"}
             className="block py-3 px-[20px] hover:bg-gray-200"
           >
-            자주묻는질문
+            FAQ
           </Link>
           <Link
             onClick={() => setMenuToggle(!menuToggle)}
             to={"/contact"}
             className="block py-3 px-[20px] hover:bg-gray-200"
           >
-            문의하기
+            Contact
           </Link>
         </div>
       </div>
