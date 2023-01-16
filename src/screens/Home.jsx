@@ -126,7 +126,8 @@ function Home() {
           /> */}
           <YouTube
             className="hidden lg:block absolute opacity-90 top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2   "
-            videoId="VO4i7nEuWEA"
+            // videoId="VO4i7nEuWEA"
+            videoId="RGx36gx7gyc"
             opts={{
               width: "800",
               height: "450",
@@ -138,10 +139,10 @@ function Home() {
               e.target.stopVideo(0);
             }}
           />
-
           <YouTube
             className=" lg:hidden absolute opacity-90 top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  "
-            videoId="VO4i7nEuWEA"
+            // videoId="VO4i7nEuWEA"
+            videoId="RGx36gx7gyc"
             opts={{
               width: "320",
               height: "180",

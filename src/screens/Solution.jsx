@@ -9,7 +9,7 @@ import presheet from "../assets/img/solution/presheet.png";
 import sinkball from "../assets/img/solution/sinkball.png";
 import smartsheet from "../assets/img/solution/smartsheet.png";
 import sensor from "../assets/img/solution/sensor.png";
-import MyImage from "../libs/MyImage";
+// import MyImage from "../libs/MyImage";
 
 function Solution() {
   return (

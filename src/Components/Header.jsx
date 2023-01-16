@@ -35,6 +35,7 @@ function Header() {
           </Link>
           <div className="flex-grow "></div>
           <div className="font-sans font-normal hidden lg:w-96 lg:flex justify-between ">
+            <Link to={"/about"}>About</Link>
             <Link to={"/solution"}>솔루션</Link>
             {/* <Link to={"/customer"}>주요고객</Link> */}
             <Link to={"/result"}>실적</Link>
@@ -85,6 +86,13 @@ function Header() {
             hidden: !menuToggle,
           })}
         >
+          <Link
+            onClick={() => setMenuToggle(!menuToggle)}
+            to={"/about"}
+            className="block px-[20px]  py-3 hover:bg-gray-200"
+          >
+            About
+          </Link>
           <Link
             onClick={() => setMenuToggle(!menuToggle)}
             to={"/solution"}

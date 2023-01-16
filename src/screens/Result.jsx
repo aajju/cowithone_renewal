@@ -211,7 +211,7 @@ function Result() {
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">오수압송</td>
-                  <td className="px-2 px-2 lg:p-4 py-2  border-r">
+                  <td className="px-2 lg:p-4 py-2  border-r">
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
@@ -707,7 +707,7 @@ function Result() {
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
-                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100">
+                  <tr className="border-b bg-white odd:bg-gray-100">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                       특허
                     </td>
@@ -718,7 +718,7 @@ function Result() {
                       배관재의 누수와 파손감지 및 관로 위치확인이 용이한 감지관
                     </td>
                   </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100">
+                  <tr className="border-b bg-white odd:bg-gray-100">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                       특허
                     </td>
@@ -1410,7 +1410,7 @@ function Result() {
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
-                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100 ">
+                  <tr className="border-b bg-white  odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                       인증
                     </td>
@@ -1558,7 +1558,7 @@ function Result() {
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
-                  <tr className="border-b bg-white odd:bg-gray-100  odd:bg-gray-100 ">
+                  <tr className="border-b bg-white  odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
                       혁신제품 (상하수도관로 파손예방 및 누수감지 시스템)
                     </td>

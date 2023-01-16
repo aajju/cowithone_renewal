@@ -6,6 +6,7 @@ import Customer from "./screens/Customer";
 import Result from "./screens/Result";
 import Faq from "./screens/Faq";
 import Contact from "./screens/Contact";
+import About from "./screens/About";
 
 const router = createBrowserRouter(
   [
@@ -17,6 +18,10 @@ const router = createBrowserRouter(
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "about",
+          element: <About />,
         },
         {
           path: "solution",
