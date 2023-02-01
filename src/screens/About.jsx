@@ -1,3 +1,20 @@
+import thumb_bg from "../assets/img/about/thumb_bg.png";
+import thumb1 from "../assets/img/about/thumb1.png";
+import thumb2 from "../assets/img/about/thumb2.png";
+import thumb3 from "../assets/img/about/thumb3.png";
+import thumb4 from "../assets/img/about/thumb4.png";
+import bps_thumb1 from "../assets/img/about/bps_thumb1.png";
+import bps_thumb2 from "../assets/img/about/bps_thumb2.png";
+import bps_thumb3 from "../assets/img/about/bps_thumb3.png";
+import sts_thumb1 from "../assets/img/about/sts_thumb1.png";
+import sts_thumb2 from "../assets/img/about/sts_thumb2.png";
+import sts_thumb3 from "../assets/img/about/sts_thumb3.png";
+import psps_thumb1 from "../assets/img/about/psps_thumb1.png";
+import psps_thumb2 from "../assets/img/about/psps_thumb2.png";
+import psps_thumb3 from "../assets/img/about/psps_thumb3.png";
+import etc_thumb1 from "../assets/img/about/etc_thumb1.png";
+import etc_thumb2 from "../assets/img/about/etc_thumb2.png";
+
 import hammer from "../assets/img/about/hammer.png";
 
 function About() {
@@ -13,50 +30,83 @@ function About() {
           <br /> 이벤트 위치는 가장 정확하게!
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-4 place-content-center  lg:px-72 gap-4 pb-20 ">
-          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] bg-red-100 flex flex-col justify-between pb-3 lg:pb-6 pt-4 lg:pt-8">
-            <img
-              className="object-fill w-[75px] lg:w-[100px] mx-auto"
-              src={hammer}
-              alt="법망치"
-            />{" "}
+          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
+            <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
+              <img
+                className="object-fill w-[30px]  mx-auto"
+                src={thumb1}
+                alt="thumb1"
+              />
+            </div>
             <div>
-              관로탐사
-              <br />
-              (정확한 위치파악)
+              <div className="text-[10px] lg:text-[13px] text-left">
+                지하시설물 유지관리의 기본
+              </div>
+              <div className="text-left text-[15px] lg:text-[20px] font-semibold">
+                관로탐사
+                <br />
+                (정확한 위치파악)
+              </div>
             </div>
           </div>
-          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] bg-red-100 flex flex-col justify-between pb-3 lg:pb-6 pt-4 lg:pt-8">
-            <img
-              className="object-fill w-[75px] lg:w-[100px] mx-auto"
-              src={hammer}
-              alt="법망치"
-            />{" "}
+
+          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
+            <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
+              <img
+                className="object-fill w-[30px]  mx-auto"
+                src={thumb2}
+                alt="thumb2"
+              />
+            </div>
             <div>
-              관파손(무단굴착)
-              <br /> 예방
+              <div className="text-[10px] lg:text-[13px] text-left">
+                지하시설물 유지관리의 핵심
+              </div>
+              <div className="text-left text-[15px] lg:text-[20px] font-semibold">
+                관파손(무단굴착)
+                <br />
+                예방
+              </div>
             </div>
           </div>
-          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] bg-red-100 flex flex-col justify-between pb-3 lg:pb-6 pt-4 lg:pt-8">
-            <img
-              className="object-fill w-[75px] lg:w-[100px] mx-auto"
-              src={hammer}
-              alt="법망치"
-            />{" "}
+
+          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
+            <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
+              <img
+                className="object-fill w-[30px]  mx-auto"
+                src={thumb3}
+                alt="thumb3"
+              />
+            </div>
             <div>
-              지하공동(싱크홀)
-              <br /> 조기발견
+              <div className="text-[10px] lg:text-[13px] text-left">
+                대형재난 예방
+              </div>
+              <div className="text-left text-[15px] lg:text-[20px] font-semibold">
+                지하공동(싱크홀)
+                <br />
+                조기발견
+              </div>
             </div>
           </div>
-          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] bg-red-100 flex flex-col justify-between pb-3 lg:pb-6 pt-4 lg:pt-8">
-            <img
-              className="object-fill w-[75px] lg:w-[100px] mx-auto"
-              src={hammer}
-              alt="법망치"
-            />{" "}
+
+          <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
+            <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
+              <img
+                className="object-fill w-[30px]  mx-auto"
+                src={thumb4}
+                alt="thumb4"
+              />
+            </div>
             <div>
-              누수감지
-              <br />
-              시스템
+              <div className="text-[10px] lg:text-[13px] text-left">
+                한 방울의 물도 소중하게
+              </div>
+              <div className="text-left text-[15px] lg:text-[20px] font-semibold">
+                누수감지
+                <br />
+                시스템
+              </div>
             </div>
           </div>
         </div>
@@ -70,7 +120,7 @@ function About() {
             지하시설물 유지관리의 기본
           </div>
           <div className="font-bold text-[20px] lg:text-[40px] pb-2">
-            정확한 위치 파악 (관로 탐사)
+            관로 탐사 (정확한 위치 파악)
           </div>
           <div className="text-[13px] lg:text-[24px] pb-2">
             지하 안전 사고에 신속 정확하게 대응하기 위해
@@ -274,7 +324,7 @@ function About() {
             관손상 원인의 70% 이상이 타공사 굴착.
             <br /> 특히 무단 굴착을 막기 위해 부단히 노력중입니다.
           </div>
-          <div>차트 이미지</div>
+          {/* <div>차트 이미지</div> */}
         </div>
         <div>
           <div>
@@ -441,9 +491,15 @@ function About() {
             파손 예방 효과 &rarr; 혁신적인 유지 비용 절감
           </div>
           <div className=" flex flex-col space-y-12 lg:pl-14  ">
-            <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
-              <div className="lg:pl-8 flex flex-col justify-center space-y-1  lg:space-y-4">
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:mb-10">
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={bps_thumb1}
+                  alt="bps_thumb1"
+                />
+              </div>
+              <div className="lg:pl-8 flex flex-col justify-center space-y-1  lg:space-y-4 pt-10 lg:pt-0">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   관리자 순회비용 절감
                 </div>
@@ -456,8 +512,14 @@ function About() {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+            <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={bps_thumb2}
+                  alt="bps_thumb2"
+                />
+              </div>
               <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   원인제공자에게 비용 청구 가능
@@ -473,8 +535,14 @@ function About() {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+            <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={bps_thumb3}
+                  alt="bps_thumb3"
+                />
+              </div>
               <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   관 수명 연장 효과{" "}
@@ -638,7 +706,13 @@ function About() {
           <div>
             <div className=" flex flex-col space-y-12 lg:pl-14  ">
               <div className="flex flex-col lg:flex-row items-center space-y-4">
-                <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+                <div className="w-[180px] h-[180px]">
+                  <img
+                    className="object-fill"
+                    src={sts_thumb1}
+                    alt="sts_thumb1"
+                  />
+                </div>
                 <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                   <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                     실시간 모니터링{" "}
@@ -651,7 +725,13 @@ function About() {
               </div>
 
               <div className="flex flex-col lg:flex-row items-center space-y-4">
-                <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+                <div className="w-[180px] h-[180px]">
+                  <img
+                    className="object-fill"
+                    src={sts_thumb2}
+                    alt="sts_thumb2"
+                  />
+                </div>
                 <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                   <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                     현장탐사 불필요{" "}
@@ -663,8 +743,14 @@ function About() {
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row items-center space-y-4">
-                <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+              <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
+                <div className="w-[180px] h-[180px]">
+                  <img
+                    className="object-fill"
+                    src={sts_thumb3}
+                    alt="sts_thumb3"
+                  />
+                </div>
                 <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                   <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                     가장 빠른 지반 침하 위치 탐색{" "}
@@ -916,7 +1002,13 @@ function About() {
           </div>
           <div className=" flex flex-col space-y-12 lg:pl-14  ">
             <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={psps_thumb1}
+                  alt="psps_thumb1"
+                />
+              </div>
               <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   누수 인식률 100%{" "}
@@ -930,8 +1022,14 @@ function About() {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+            <div className="flex flex-col lg:flex-row items-center space-y-4 ">
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={psps_thumb2}
+                  alt="psps_thumb2"
+                />
+              </div>
               <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   신속한 누수 감지 시간{" "}
@@ -946,8 +1044,14 @@ function About() {
               </div>
             </div>
 
-            <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+            <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={psps_thumb3}
+                  alt="psps_thumb3"
+                />
+              </div>
               <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   정확한 누수 위치 탐색{" "}
@@ -980,7 +1084,13 @@ function About() {
 
           <div className=" flex flex-col space-y-12 lg:pl-14  lg:pt-12 ">
             <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={etc_thumb1}
+                  alt="etc_thumb1"
+                />
+              </div>
               <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   자산 관리 기능{" "}
@@ -1009,7 +1119,13 @@ function About() {
               </div>
             </div>
             <div className="flex flex-col lg:flex-row items-center space-y-4">
-              <div className="bg-red-400 w-[200px] h-[200px] rounded-full"></div>
+              <div className="w-[180px] h-[180px]">
+                <img
+                  className="object-fill"
+                  src={etc_thumb2}
+                  alt="etc_thumb2"
+                />
+              </div>
               <div className="lg:pl-8 flex flex-col justify-center space-y-1 lg:space-y-4">
                 <div className="text-[20px] lg:text-[32px] font-semibold text-center lg:text-left">
                   방식 전위 체크{" "}
