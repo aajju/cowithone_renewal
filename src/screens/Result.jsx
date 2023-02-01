@@ -379,7 +379,7 @@ function Result() {
         <div className="px-[20px] text-[18px] lg:text-[28px] text-gray-500 pt-2">
           다양한 파트너들과 협력하고 있습니다
         </div>
-        <div className="px-[4px] lg:px-44  pt-6 lg:pt-8 grid grid-cols-5  items-center  gap-8  text-[12px] lg:text-[20px] ">
+        <div className="px-[4px] lg:px-44  pt-6 lg:pt-8 grid grid-cols-5  items-center  gap-8  text-[10px] lg:text-[20px] ">
           <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2 ">
             <div>
               <BuildingLibraryIcon className="w-5 h-5 lg:w-10 lg:h-10  mx-auto" />
@@ -508,9 +508,14 @@ function Result() {
             {" "}
             <img src={con_taeyoung} alt="태영건설" className="object-contain" />
           </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
+          {/* <div className="flex  justify-center lg:h-[88px]">
             <img src={eng_dmcm} alt="디엠씨엠" className="object-contain" />
+          </div> */}
+          <div className="text-gray-500">
+            <div className="text-[14px] lg:text-[24px] font-semibold ">
+              DMCM
+            </div>
+            <div className="text-[10px] lg:text-[16px]">디엠씨엠</div>
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}

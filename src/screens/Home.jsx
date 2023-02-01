@@ -80,7 +80,7 @@ function Home() {
     pauseOnHover: false, // hover시 정지
     infinite: true,
     speed: 1000,
-    slidesToScroll: 4,
+    slidesToScroll: 3,
     slidesToShow: 6,
     autoplay: true, // 자동 캐러셀
     autoplaySpeed: 1500, // 자동 캐러셀 속도
@@ -449,13 +449,13 @@ function Home() {
               className="object-contain px-2 lg:px-5"
             />
           </div>
-          <div>
+          {/* <div>
             <img
               src={eng_dmcm}
               alt="특허1"
               className="object-contain px-2 lg:px-5"
             />
-          </div>
+          </div> */}
           <div>
             <img
               src={etc_movements}
@@ -477,13 +477,13 @@ function Home() {
               className="object-contain px-2 lg:px-5"
             />
           </div>
-          <div>
+          {/* <div>
             <img
               src={etc_youngpoong}
               alt="특허1"
               className="object-contain px-2 lg:px-5"
             />
-          </div>
+          </div> */}
         </Slider>
       </div>
       {/* <div className="flex flex-col pb-10 lg:pb-24 text-center">
