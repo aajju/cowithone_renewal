@@ -12,7 +12,6 @@ const router = createBrowserRouter(
   [
     {
       path: "/",
-      // path: `${process.env.PUBLIC_URL}/`,
       element: <Root />,
       children: [
         {
@@ -46,20 +45,7 @@ const router = createBrowserRouter(
       ],
       errorElement: <Navigate to="/"></Navigate>,
     },
-    // {
-    //   path: "/*",
-    //   element: <Navigate to="/"></Navigate>,
-    // },
   ],
   { basename: `${process.env.PUBLIC_URL}` }
 );
-
-// function ErrorBoundary() {
-//   let error = useRouteError();
-//   console.error(error);
-
-//   // Uncaught ReferenceError: path is not defined
-//   return <Navigate to="/"></Navigate>;
-// }
-
 export default router;
