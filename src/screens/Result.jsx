@@ -149,7 +149,20 @@ function Result() {
                 <tr className="bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    부산 에코델타시티
+                    부산 에코델타시티 2-4 공구
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    상수도, 하수도
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    PSPS (파손 예방 및 누수감지 시스템),
+                    <br /> STS (파손 예방 및 지반 침하 예방 시스템){" "}
+                  </td>
+                </tr>
+                <tr className="bg-white ">
+                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    부산 에코델타시티 2-5 공구
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
                     상수도, 하수도
@@ -188,17 +201,15 @@ function Result() {
                   <td className="px-2 py-2 lg:p-4 border-r">시흥 광역상수도</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">광역상수도</td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    STS (파손 예방 및 지반 침하 예방 시스템){" "}
                   </td>
                 </tr>
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국토지주택공사
-                    <br />
-                    (LH)
+                    한국농어촌공사
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    인천 검단지구
+                    인천 검단지구{" "}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b ">
                     농업용수
@@ -209,12 +220,13 @@ function Result() {
                 </tr>
                 <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
-                  <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">오수압송</td>
+                  <td className="px-2 py-2 lg:p-4 border-r"> 수원 이목지구</td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">상수도</td>
                   <td className="px-2 lg:p-4 py-2  border-r">
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
                 </tr>
+
                 <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     한국수력원자력
@@ -249,10 +261,10 @@ function Result() {
                 </tr>
                 <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국농어촌공사
+                    한국토지주택공사 (LH){" "}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">수원 이목지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">상수도</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">오수 압송관</td>
                   <td className="px-2 lg:p-4 py-2  border-r">
                     PSPS (파손 예방 및 누수 감지 시스템)
                   </td>
@@ -289,7 +301,16 @@ function Result() {
                 <tr className="bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    부산 에코델타시티
+                    부산 EDC 2-4 공구
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    상수도, 하수도
+                  </td>
+                </tr>
+                <tr className="bg-white ">
+                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    부산 EDC 2-5 공구
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
                     상수도, 하수도
@@ -320,21 +341,19 @@ function Result() {
                 </tr>
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국토지주택공사
-                    <br />
-                    (LH)
+                    한국농어촌공사
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    인천 검단지구
+                    수원 이목지구{" "}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b ">
-                    농업용수
+                    상수도
                   </td>
                 </tr>
-                <tr className="border-b bg-white  ">
+                <tr className="border-b bg-white odd:bg-gray-100 ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
-                  <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">오수압송</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">인천 검단지구</td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">농업용수</td>
                 </tr>
                 <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
@@ -345,26 +364,26 @@ function Result() {
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r ">해수취수관</td>
                 </tr>
-                <tr className="border-b bg-white  ">
+                <tr className="border-b bg-white  odd:bg-gray-100">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     남양주시
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">남양주 조안면</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">하수 압송관</td>
                 </tr>
-                <tr className="border-b bg-white  ">
+                <tr className="border-b bg-white  odd:bg-gray-100">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                     송파구청
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">송파구</td>
                   <td className="px-2 py-2 lg:p-4 border-r ">하천유지용수</td>
                 </tr>
-                <tr className="border-b bg-white  ">
+                <tr className="border-b bg-white odd:bg-gray-100 ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국농어촌공사
+                    한국토지주택공사 (LH){" "}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">수원 이목지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">상수도</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">오수 압송관</td>
                 </tr>
               </tbody>
             </table>
@@ -517,14 +536,20 @@ function Result() {
             </div>
             <div className="text-[10px] lg:text-[16px]">디엠씨엠</div>
           </div>
-          <div className="flex  justify-center lg:h-[88px]">
+          <div className="text-gray-500">
+            <div className="text-[12px] lg:text-[20px] font-semibold ">
+              영풍건설
+            </div>
+            {/* <div className="text-[10px] lg:text-[16px]">디엠씨엠</div> */}
+          </div>
+          {/* <div className="flex  justify-center lg:h-[88px]">
             {" "}
             <img
               src={etc_youngpoong}
               alt="영풍건설"
               className="object-contain"
             />
-          </div>
+          </div> */}
         </div>
       </div>
       {/* section4. 기타실적 */}
