@@ -529,9 +529,9 @@ function About() {
                   <br /> 수년내에 부식을 유발하여 누수 및 지반침하(싱크홀)의
                   원인이 됨
                 </div>
-                <div className="text-[#232976] font-semibold lg:text-[20px] text-[12px] ">
+                {/* <div className="text-[#232976] font-semibold lg:text-[20px] text-[12px] ">
                   CASE STUDY (송산그린시티 택지개발 중 관파손 예방 사례)
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -738,7 +738,7 @@ function About() {
                   </div>
                   <div className="text-[12px] lg:text-[24px]">
                     GPR 방식은 숙련된 전문가와 고가의 장비를 이용하는 <br />
-                    현장탐사가 필수이며 탐지 비용 매우 비쌈 (약 얼마...)
+                    현장탐사가 필수이며 고가의 탐지 비용
                   </div>
                 </div>
               </div>
@@ -778,7 +778,7 @@ function About() {
               누수 감지 시스템
             </div>
             <div className="text-[13px] lg:text-[24px] pb-2">
-              누수로 새는 돈 연간 00조 원
+              누수로 새는 돈 연간 6,000억 원
             </div>
           </div>
           <div className="text-[18px] lg:text-[30px]">

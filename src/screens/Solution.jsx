@@ -135,7 +135,7 @@ function Solution() {
         </div>
         <div className="pt-[40px] flex ">
           <button className="text-[16px] mx-auto lg:text-[20px] font-medium py-3  px-4 border  border-transparent rounded-md shadow-sm   text-white bg-[#232976] hover:bg-[#0713c0] ">
-            <a href="https://cowithone.hanbiro.net/cgi-bin/cloudGetLink.cgi?id=1644&key=79c5741a5941b8873f77bf539afb6b07">
+            <a href="https://www.salesclue.io/share/file/f6f2e7fa5fd2c664">
               제품 카탈로그 다운로드
             </a>
           </button>
