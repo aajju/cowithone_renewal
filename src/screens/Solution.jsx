@@ -9,25 +9,67 @@ import presheet from "../assets/img/solution/presheet.png";
 import sinkball from "../assets/img/solution/sinkball.png";
 import smartsheet from "../assets/img/solution/smartsheet.png";
 import sensor from "../assets/img/solution/sensor.png";
+
 // import MyImage from "../libs/MyImage";
+import { useRecoilValue } from "recoil";
+import { languageState } from "../recoil/languageState"; // Recoil 상태 파일의 경로를 정확하게 지정하세요.
+import { useTranslation } from "react-i18next";
 
 function Solution() {
+  const language = useRecoilValue(languageState);
+  const isKorean = language === "ko";
+  const isEnglish = language === "en";
+  const { t, i18n } = useTranslation();
+
+  // 언어에 따른 폰트 크기 설정
+  const fontSizeKorean = {
+    base: "20px",
+    md: "34px",
+    lg: "52px",
+  };
+
+  const fontSizeEnglish = {
+    base: "16px", // 영어일 때의 기본 폰트 크기
+    md: "20px",
+    lg: "34px",
+  };
+
+  const fontSize = i18n.language === "ko" ? fontSizeKorean : fontSizeEnglish;
+
   return (
     <div>
       {/* section1. 메인 */}
       <div className="relative ">
         <img className="w-full" src={bg1} alt="Cowithone" />
         <div>
-          <h1 className="absolute top-[30px] md:top-[47px] lg:top-[68px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[20px] md:text-[34px] lg:text-[52px]  ">
-            지하시설물 실시간 모니터링 시스템
+          <h1
+            className={`absolute top-[30px] md:top-[47px] lg:top-[68px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[${fontSize.base}] md:text-[${fontSize.md}] lg:text-[${fontSize.lg}]`}
+          >
+            {t("solution_s1_title")}
           </h1>
-          <h3 className="absolute top-[68px] md:top-[96px] lg:top-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center  text-[12px] md:text-[16px] lg:text-[22px] ">
-            <color className="font-semibold text-rose-500">실시간</color>
-            으로&nbsp;
-            <color className="font-semibold text-rose-500">지하시설물</color>
-            을&nbsp;
-            <color className="font-semibold text-rose-500">모니터링</color> 할
-            수 있어 더욱 안전합니다
+          <h3
+            className={`absolute top-[68px] md:top-[96px] lg:top-[140px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center text-[12px] md:text-[16px] lg:text-[22px] ${
+              isKorean ? "ko-style" : "en-style"
+            }`}
+          >
+            {isKorean ? (
+              <>
+                <color className="font-semibold text-rose-500">실시간</color>
+                으로&nbsp;
+                <color className="font-semibold text-rose-500">
+                  지하시설물
+                </color>
+                을&nbsp;
+                <color className="font-semibold text-rose-500">
+                  모니터링
+                </color>{" "}
+                할 수 있어 더욱 안전합니다
+              </>
+            ) : (
+              <color className="font-semibold text-gray-500">
+                It's safer to monitor underground pipes in real time
+              </color>
+            )}
           </h3>
           <img
             className="absolute top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  w-8/12 "
@@ -39,8 +81,20 @@ function Solution() {
       {/* section2 */}
       <div className="h-[288px] lg:h-[488px] bg-[#F9FAFB] flex">
         <p className="pt-10 text-center text-[15px] md:text-[26px] m-auto lg:text-[32px] font-bold">
-          지하시설물은 땅 속에 있어 관리가 어려워,
-          <br /> 유지비용이 많이 들고 국민의 안전을 위협합니다
+          {isKorean ? (
+            <>
+              지하시설물은 땅 속에 있어 관리가 어려워,
+              <br /> 유지비용이 많이 들고 국민의 안전을 위협합니다
+            </>
+          ) : (
+            <>
+              Underground pipes are difficult to manage <br />
+              because they are underground, <br />
+              which is expensive to maintain and
+              <br />
+              threatens the safety of the people
+            </>
+          )}
         </p>
       </div>
       {/* section3 */}
@@ -48,17 +102,15 @@ function Solution() {
         <div className="space-y-2 lg:space-y-4 ">
           <div className="px-[20px] lg:pl-72">
             <div className="text-[#232976] text-[18px] lg:text-[30px] font-bold mb-2">
-              BPS (파손 예방 시스템)
+              {t("solution_s3_bps_title")}
             </div>
             <div className="font-bold text-[20px] lg:text-[40px] pb-2">
-              비용은 저렴한지만 성능은 최고 (BEST)
+              {t("solution_s3_bps_subtitle")}
             </div>
             <div className="text-[13px] lg:text-[24px] pb-2">
               <ul className="list-none">
-                <li>
-                  - 관 파손 예방만으로도 지하시설물 문제의 80%를 사전 예방{" "}
-                </li>
-                <li>- 시공 및 유지보수 간편 </li>
+                <li>{t("solution_s3_bps_description1")}</li>
+                <li> {t("solution_s3_bps_description2")}</li>
               </ul>
             </div>
           </div>
@@ -69,53 +121,55 @@ function Solution() {
             /> */}
             <img className="w-full lg:w-4/6  mx-auto" src={bps} alt="bps" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
-              구성품 : RM-5000, RM-4000, 스마트 예방시트
+              {t("solution_s3_bps_components")}
             </div>
           </div>
         </div>
         <div className="space-y-2 lg:space-y-4 ">
           <div className="px-[20px] lg:pl-72 ">
             <div className="text-[#232976] text-[18px] lg:text-[30px] font-bold mb-2">
-              STS (파손 예방 및 지반침하 예방 시스템)
+              {t("solution_s3_sts_title")}
             </div>
             <div className="font-bold text-[20px] lg:text-[40px] pb-2">
-              예방에 안전을 더했습니다
+              {t("solution_s3_sts_subtitle")}
             </div>
             <div className="text-[13px] lg:text-[24px] pb-2">
               <ul className="list-none">
-                <li>- 목숨보다 소중한 것은 없습니다 </li>
+                <li> {t("solution_s3_sts_description")}</li>
               </ul>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
             <img className="w-full lg:w-4/6  mx-auto" src={sts} alt="sts" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
-              구성품 : RM-5000, RM-4000, 스마트 예방시트,
-              <strong className="text-[#4850c9]">&nbsp;싱크볼</strong>
+              {t("solution_s3_bps_components")},
+              <strong className="text-[#4850c9]">
+                &nbsp; {t("solution_s3_sts_components")}
+              </strong>
             </div>
           </div>
         </div>
         <div className="space-y-2 lg:space-y-4 ">
           <div className="px-[20px] lg:pl-72">
             <div className="text-[#232976] text-[18px] lg:text-[30px] font-bold mb-2">
-              PSPS (파손 예방 및 누수 감지 시스템)
+              {t("solution_s3_psps_title")}
             </div>
             <div className="font-bold text-[20px] lg:text-[40px] pb-2">
-              이보다 완벽할 순 없다
+              {t("solution_s3_psps_subtitle")}
             </div>
             <div className="text-[13px] lg:text-[24px] pb-2">
               <ul className="list-none">
-                <li>- 상수도를 가장 완벽하게 사용하는 방법</li>
-                <li>- 예방, 안전, 그리고 유지관리비를 최소화할 수 있습니다</li>
+                <li> {t("solution_s3_psps_description1")}</li>
+                <li> {t("solution_s3_psps_description2")}</li>
               </ul>
             </div>
           </div>
           <div className="flex flex-col space-y-4">
             <img className="w-full lg:w-4/6  mx-auto" src={psps} alt="psps" />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
-              구성품 : RM-5000, RM-4000, 스마트 예방시트,
+              {t("solution_s3_bps_components")},
               <strong className="text-[#4850c9]">
-                &nbsp;스마트시트, 누수센서 및 보호커버
+                &nbsp; {t("solution_s3_psps_components")}
               </strong>
             </div>
           </div>
@@ -125,18 +179,18 @@ function Solution() {
       <div className="h-[1100px] lg:h-[1600px] bg-[#F9FAFB]  lg:block  px-[20px] ">
         <div className="pt-12 lg:pt-24">
           <h1 className="font-bold text-[22px] lg:text-[32px] text-center">
-            우리 회사에 알맞는 솔루션은?
+            {t("solution_s4_title")}
           </h1>
         </div>
         <div className="pt-[16px]">
           <h2 className="font-semibold text-[14px] lg:text-[24px] text-center">
-            관 종류, 예산, 필요 기능에 맞춰 솔루션을 선택해 보세요
+            {t("solution_s4_subtitle")}
           </h2>
         </div>
         <div className="pt-[40px] flex ">
           <button className="text-[16px] mx-auto lg:text-[20px] font-medium py-3  px-4 border  border-transparent rounded-md shadow-sm   text-white bg-[#232976] hover:bg-[#0713c0] ">
             <a href="https://www.salesclue.io/share/file/f6f2e7fa5fd2c664">
-              제품 카탈로그 다운로드
+              {t("solution_s4_btn")}
             </a>
           </button>
         </div>
@@ -154,55 +208,58 @@ function Solution() {
               <tbody className="text-[12px] lg:text-[16px] bg-white">
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    요약
+                    {t("solution_s4_table_summary")}
                   </td>
                   <td className="py-2 lg:p-4 border-r text-center">
-                    관 파손 예방
+                    {t("solution_s4_table_prevent")}
                   </td>
                   <td className="py-2 lg:p-4 border-r text-center">
-                    관 파손 예방,
+                    {t("solution_s4_table_prevent")}
+                    ,
                     <br />
-                    초기 지반 침하 감지
+                    {t("solution_s4_table_detect_sinkhall")}
                   </td>
                   <td className="lg:p-4 py-2 text-center border-r">
-                    관 파손 예방,
+                    {t("solution_s4_table_prevent")}
+                    ,
                     <br />
-                    지반 침하 예방,
+                    {t("solution_s4_table_prevent_sinkhall")}
+                    ,
                     <br />
-                    누수 감지
+                    {t("solution_s4_table_detect_water")}
                   </td>
                 </tr>
                 <tr className="">
                   <td className="font-medium border-r pl-2 pt-2 lg:pl-4 lg:pt-4 align-top">
-                    제품구성
+                    {t("solution_s4_table_components")}
                   </td>
                   <td className="py-2 lg:p-4 border-b text-center border-r  ">
-                    이벤트 감지장치
+                    {t("solution_s4_table_detector")}
                   </td>
                   <td className="lg:p-4 py-2  border-b border-r text-center  ">
-                    이벤트 감지장치
+                    {t("solution_s4_table_detector")}
                   </td>
                   <td className="lg:p-4 py-2  border-b border-r text-center  ">
-                    이벤트 감지장치
+                    {t("solution_s4_table_detector")}
                   </td>
                 </tr>
                 <tr className="">
                   <td className="p-4 border-r"></td>
                   <td className="py-2 lg:p-4 border-b border-r  text-center">
-                    스마트 예방 시트
+                    {t("solution_s4_table_preventsheet")}
                   </td>
                   <td className="py-2 lg:p-4 border-b border-r  text-center">
-                    스마트 예방 시트
+                    {t("solution_s4_table_preventsheet")}
                   </td>
                   <td className="py-2 lg:p-4 border-b border-r  text-center">
-                    스마트 예방 시트
+                    {t("solution_s4_table_preventsheet")}
                   </td>
                 </tr>
                 <tr className="">
                   <td className="p-4 border-r"></td>
                   <td className="p-4 border-b border-r"></td>
                   <td className="py-2 lg:p-4  border-b border-r  text-center text-[#232976] font-medium">
-                    싱크볼
+                    {t("solution_s4_table_sinkball")}
                   </td>
                   <td className="p-4 border-b border-r"></td>
                 </tr>
@@ -211,7 +268,7 @@ function Solution() {
                   <td className="p-4 border-b border-r"></td>
                   <td className="p-4 border-b border-r"></td>
                   <td className="py-2 lg:p-4  border-b border-r  text-center text-[#232976] font-medium">
-                    스마트 시트
+                    {t("solution_s4_table_smartsheet")}
                   </td>
                 </tr>
                 <tr className="">
@@ -219,24 +276,25 @@ function Solution() {
                   <td className="p-4 border-b border-r"></td>
                   <td className="p-4 border-b border-r"></td>
                   <td className="py-2 lg:p-4  border-b border-r  text-center text-[#232976] font-medium">
-                    누수 감지 센서
-                    <br />및 보호커버
+                    {t("solution_s4_table_watersensor")}
                   </td>
                 </tr>
                 <tr className="border-b ">
                   <td className="font-medium border-r pl-2 py-2 lg:pl-4 lg:pt-4 align-top">
-                    방식전위
+                    {t("solution_s4_table_corrosion")}
+                    <br />
+                    {t("solution_s4_table_cathodic")}
                   </td>
                   <td className="  text-center"></td>
                   <td className="text-center py-2 lg:p-4 ">
-                    솔루션에 관계 없이
-                    <br /> 코팅관에 도입 가능
+                    {t("solution_s4_table_corrosion_description1")}
+                    <br /> {t("solution_s4_table_corrosion_description2")}
                   </td>
                   <td className="text-center border-r"></td>
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    상수도관
+                    {t("solution_s4_table_waterpipe")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
@@ -244,7 +302,7 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    오수관
+                    {t("solution_s4_table_sewagepipe")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
@@ -252,7 +310,7 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    우수관
+                    {t("solution_s4_table_stormdrain")}
                   </td>
                   <td className="py-2 lg:p-4 border-r text-center">✔</td>
                   <td className="py-2 lg:p-4 border-r text-center">✔</td>
@@ -260,7 +318,7 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    중수도관
+                    {t("solution_s4_table_wastewaterpipe")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
@@ -268,12 +326,12 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    가스관
+                    {t("solution_s4_table_gaspipe")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">
                     ✔<br />
                     <h6 className="text-[12px] lg:text-[14px] pt-2">
-                      (+방식전위)
+                      (+ {t("solution_s4_table_corrosion")})
                     </h6>
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center"></td>
@@ -281,7 +339,7 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    난방관
+                    {t("solution_s4_table_heatingpipe")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
@@ -289,7 +347,7 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-medium">
-                    송유관
+                    {t("solution_s4_table_oilpipeline")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
@@ -297,7 +355,7 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4  align-top border-r font-medium">
-                    전력관
+                    {t("solution_s4_table_powerpipe")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  border-r text-center"></td>
@@ -305,7 +363,7 @@ function Solution() {
                 </tr>
                 <tr className="border-b ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4  align-top border-r font-medium">
-                    기타
+                    {t("solution_s4_table_etc")}
                   </td>
                   <td className="py-2 lg:p-4  border-r text-center">✔</td>
                   <td className="py-2 lg:p-4  border-r text-center"></td>
@@ -319,7 +377,7 @@ function Solution() {
       {/* section5 구성품 */}
       <div className="py-14 px-[20px] lg:py-[100px] lg:w-[1200px] mx-auto">
         <div className="text-center text-[#232976] font-semibold text-[20px] lg:text-[24px] ">
-          구성품
+          {t("solution_s5_title")}
         </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-10  pt-16">
           <div className="m-auto ">
@@ -331,14 +389,16 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              감지장치 (RM-5000)
+              {t("solution_s5_detector")}
+              (RM-5000)
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
             </div>
             <div className=" h-[80px] px-4 pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              지하시설물의 상태 데이터를 서버로 전송
-              <br className="hidden lg:block" /> (외부 전원 사용)
+              {t("solution_s5_detector_description1")}
+              <br className="hidden lg:block" />
+              {t("solution_s5_detector_description2")}
             </div>
           </div>
           <div className="m-auto ">
@@ -350,15 +410,16 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              감지장치 (RM-4000)
+              {t("solution_s5_detector")}
+              (RM-4000)
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
             </div>
             <div className=" h-[80px]  px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              지하시설물의 이벤트(파손,누수,지반침하)를 감지
+              {t("solution_s5_detector_description3")}
               <br className="hidden lg:block" />
-              (태양광 사용)
+              {t("solution_s5_detector_description4")}
             </div>
           </div>
           <div className="m-auto ">
@@ -370,14 +431,15 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              스마트예방시트
+              {t("solution_s4_table_preventsheet")}
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #BPS #STS #PSPS
             </div>
             <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              매설관 30~50cm 위에 설치하며,
-              <br className="hidden lg:block" /> 지하시설물의 파손을 예방
+              {t("solution_s5_preventsheet_description1")}
+              <br className="hidden lg:block" />{" "}
+              {t("solution_s5_preventsheet_description2")}
             </div>
           </div>
           <div className="m-auto ">
@@ -389,14 +451,15 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              싱크볼
+              {t("solution_s4_table_sinkball")}
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #STS
             </div>
             <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              초기 지반침하를 감지하여,
-              <br className="hidden lg:block" /> 대형재난을 사전에 예방
+              {t("solution_s5_sinkball_description1")}
+              <br className="hidden lg:block" />{" "}
+              {t("solution_s5_sinkball_description2")}
             </div>
           </div>
           <div className="m-auto ">
@@ -408,14 +471,15 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              스마트시트
+              {t("solution_s4_table_smartsheet")}
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #PSPS
             </div>
             <div className=" h-[80px] px-4  pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              관 외면에 부착하여
-              <br className="hidden lg:block" /> 누수센서와 감지장치를 연결
+              {t("solution_s5_smartsheet_description1")}
+              <br className="hidden lg:block" />{" "}
+              {t("solution_s5_smartsheet_description2")}
             </div>
           </div>{" "}
           <div className="m-auto ">
@@ -427,13 +491,15 @@ function Solution() {
               />
             </div>
             <div className="pt-4 text-center text-[14px] lg:text-[20px] text-[#454545] font-semibold">
-              누수감지센서 및 보호커버
+              {t("solution_s4_table_watersensor")}
+              {isEnglish ? <br /> : " "}
+              {t("solution_s4_table_cover")}
             </div>
             <div className="text-center pt-1 font-semibold text-[#232976] text-[13px] lg:text-[18px]">
               #PSPS
             </div>
             <div className=" h-[80px] px-4 pt-3 text-center font-light text-[12px] lg:text-[16px] text-[#454545]">
-              이음부에서 발생하는 누수를 감지
+              {t("solution_s5_leaksensor_description")}
             </div>
           </div>
         </div>

@@ -9,12 +9,12 @@ import loc_hwasung from "../assets/img/partner/loc_hwasung.png";
 import con_kumho from "../assets/img/partner/con_kumho.png";
 import con_hdc from "../assets/img/partner/con_hdc.png";
 import con_taeyoung from "../assets/img/partner/con_taeyoung.png";
-import eng_dmcm from "../assets/img/partner/eng_dmcm.png";
+// import eng_dmcm from "../assets/img/partner/eng_dmcm.png";
 import eng_dohwa from "../assets/img/partner/eng_dohwa.png";
 import eng_yooshin from "../assets/img/partner/eng_yooshin.png";
 import etc_becs from "../assets/img/partner/etc_becs.png";
 import etc_corel from "../assets/img/partner/etc_corel.png";
-import etc_youngpoong from "../assets/img/partner/etc_youngpoong.jpeg";
+// import etc_youngpoong from "../assets/img/partner/etc_youngpoong.jpeg";
 import pub_lh from "../assets/img/partner/pub_lh.png";
 import pub_hydro from "../assets/img/partner/pub_hydro.png";
 import pub_krclean from "../assets/img/partner/pub_krclean.png";
@@ -65,7 +65,30 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { useRecoilValue } from "recoil";
+import { languageState } from "../recoil/languageState"; // Recoil 상태 파일의 경로를 정확하게 지정하세요.
+import { useTranslation } from "react-i18next";
+
 function Result() {
+  const language = useRecoilValue(languageState);
+  const isKorean = language === "ko";
+  const isEnglish = language === "en";
+  const { t } = useTranslation();
+  // 언어에 따른 폰트 크기 설정
+  const fontSizeKorean = {
+    base: "14px",
+    md: "20px",
+    lg: "28px",
+  };
+
+  const fontSizeEnglish = {
+    base: "12px", // 영어일 때의 기본 폰트 크기
+    md: "16px",
+    lg: "24px",
+  };
+
+  const fontSize = isKorean ? fontSizeKorean : fontSizeEnglish;
+
   const settings = {
     dots: true,
     arrows: false, // 좌,우 버튼
@@ -97,176 +120,207 @@ function Result() {
       {/* section1. 실적 메인 */}
       <div className="px-[20px] text-center ">
         <h1 className="font-bold text-[22px] lg:text-[52px] py-8 lg:pb-20 lg:pt-24 ">
-          이미 많은 곳에서
-          <br /> 코위드원 솔루션을 이용중입니다
+          {t("result_s1_title1")}
+          <br /> {t("result_s1_title2")}
         </h1>
       </div>
       {/* section2. 납품실적 */}
       <div className="bg-[#f4f4f4] py-10 lg:py-24">
         <div className="px-[20px] lg:px-64 font-semibold text-[30px] lg:text-[40px]">
-          납품 실적
+          {t("result_s2_title")}
         </div>
-        <div className="px-[20px] lg:px-64  text-[14px] lg:text-[28px] pt-2 text-gray-500">
-          택지개발(상하수도) 뿐만 아니라,
-          <br /> 광역상수도 / 공업용수 / 농업용수 / 해수취수관 / 하천유지용수
-          등&nbsp;
+        <p
+          className={`px-[20px] lg:px-64 pt-2 text-gray-500 text-[${fontSize.base}] md:text-[${fontSize.md}] lg:text-[${fontSize.lg}]`}
+        >
+          &nbsp;{t("result_s2_subtitle1")}
+          <br /> {t("result_s2_subtitle2")}
+          &nbsp;
           <br className="hidden lg:block" />
-          다양한 분야에서 실적을 쌓았습니다.
-        </div>
+          {t("result_s2_subtitle3")}
+        </p>
         <div className="px-[20px]   pt-6">
           {/* for PC table */}
           <div className="overflow-x-auto hidden lg:block">
             <table className="table-auto w-[500px] lg:w-[880px] mx-auto border-l border-t shadow  ">
               <thead className="border-b">
                 <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
-                  <th className="pl-2 lg:pl-4 border-r text-left">고객</th>
+                  <th className="pl-2 lg:pl-4 border-r text-left">
+                    {" "}
+                    {t("result_s2_t_r1_1")}
+                  </th>
                   <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                    납품 현장
+                    {t("result_s2_t_r1_2")}
                   </th>
                   <th className="pl-2 lg:pl-4 border-r text-left">
-                    지하매설관
+                    {t("result_s2_t_r1_3")}
                   </th>
                   <th className="pl-2 lg:pl-4 border-r text-left ">
-                    적용 솔루션
+                    {t("result_s2_t_r1_4")}
                   </th>
                 </tr>
               </thead>
               <tbody className="text-[12px] lg:text-[16px]">
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국수자원공사
+                    {t("result_s2_t_cli_1")}
                     <br />
-                    (K-WATER)
+                    {isKorean && "(K-WATER)"}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-b border-r">
-                    화성 송산 그린시티
+                    {t("result_s2_t_site_1")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r border-b">상수도</td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    {t("result_s2_t_water")}
+                  </td>
                   <td className="px-2 lg:p-4 py-2  border-r border-b">
-                    BPS (파손 예방 시스템){" "}
+                    {t("result_s2_t_bps")}
                   </td>
                 </tr>
                 <tr className="bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    부산 에코델타시티 2-4 공구
+                    {t("result_s2_t_site_2")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    상수도, 하수도
+                    {t("result_s2_t_water2")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    PSPS (파손 예방 및 누수감지 시스템),
-                    <br /> STS (파손 예방 및 지반 침하 예방 시스템){" "}
+                    {t("result_s2_t_psps")}
+                    ,
+                    <br /> {t("result_s2_t_sts")}
                   </td>
                 </tr>
                 <tr className="bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    부산 에코델타시티 2-5 공구
+                    {t("result_s2_t_site_3")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    상수도, 하수도
+                    {t("result_s2_t_water2")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    PSPS (파손 예방 및 누수감지 시스템),
-                    <br /> STS (파손 예방 및 지반 침하 예방 시스템){" "}
+                    {t("result_s2_t_psps")}
+                    ,
+                    <br /> {t("result_s2_t_sts")}
                   </td>
                 </tr>
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    수원 삼성전자
+                    {t("result_s2_t_site_4")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    공업용수
+                    {t("result_s2_t_ind_water")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    STS (파손 예방 및 지반 침하 예방 시스템){" "}
+                    {t("result_s2_t_sts")}
                   </td>
                 </tr>
                 <tr className="bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    보령/부여 관로 이설
+                    {t("result_s2_t_site_5")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b ">
-                    광역상수도
+                    {t("result_s2_t_metro_water")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    STS (파손 예방 및 지반 침하 예방 시스템){" "}
+                    {t("result_s2_t_sts")}
                   </td>
                 </tr>
                 <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
-                  <td className="px-2 py-2 lg:p-4 border-r">시흥 광역상수도</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">광역상수도</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_6")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_metro_water")}
+                  </td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    STS (파손 예방 및 지반 침하 예방 시스템){" "}
+                    {t("result_s2_t_sts")}
                   </td>
                 </tr>
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국농어촌공사
+                    {t("result_s2_t_cli_2")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    인천 검단지구{" "}
+                    {t("result_s2_t_site_7")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b ">
-                    농업용수
+                    {t("result_s2_t_agri_water")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    LSS (누수감지 시스템){" "}
+                    {t("result_s2_t_lss")}
                   </td>
                 </tr>
                 <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
-                  <td className="px-2 py-2 lg:p-4 border-r"> 수원 이목지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">상수도</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_8")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_water")}
+                  </td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    {t("result_s2_t_psps")}
                   </td>
                 </tr>
 
                 <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국수력원자력
+                    {t("result_s2_t_cli_3")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">
-                    울진 원자력발전소
+                    {t("result_s2_t_site_9")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">해수취수관</td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_seawater")}
+                  </td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    LSS (누수감지 시스템){" "}
+                    {t("result_s2_t_lss")}
                   </td>
                 </tr>
                 <tr className="border-b bg-white   ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    남양주시
+                    {t("result_s2_t_cli_4")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">남양주 조안면</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">하수 압송관</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_10")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_sewage_pressure")}
+                  </td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    LSS (누수감지 시스템){" "}
+                    {t("result_s2_t_lss")}
                   </td>
                 </tr>
                 <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    송파구청
+                    {t("result_s2_t_cli_5")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">송파구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">하천유지용수</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_11")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_river_water")}
+                  </td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    {t("result_s2_t_psps")}
                   </td>
                 </tr>
                 <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국토지주택공사 (LH){" "}
+                    {t("result_s2_t_cli_6")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">오수 압송관</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_12")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_sewage_pressure2")}
+                  </td>
                   <td className="px-2 lg:p-4 py-2  border-r">
-                    PSPS (파손 예방 및 누수 감지 시스템)
+                    {t("result_s2_t_psps")}
                   </td>
                 </tr>
               </tbody>
@@ -277,113 +331,141 @@ function Result() {
             <table className="table-auto w-full lg:w-full mx-auto border-l border-t  shadow  ">
               <thead className="border-b">
                 <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
-                  <th className="pl-2 lg:pl-4 border-r text-left">고객</th>
+                  <th className="pl-2 lg:pl-4 border-r text-left">
+                    {" "}
+                    {t("result_s2_t_r1_1")}
+                  </th>
                   <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                    납품 현장
+                    {t("result_s2_t_r1_2")}
                   </th>
                   <th className="pl-2 lg:pl-4 border-r text-left">
-                    지하매설관
+                    {t("result_s2_t_r1_3")}
                   </th>
                 </tr>
               </thead>
               <tbody className="text-[12px] lg:text-[16px]">
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국수자원공사
+                    {t("result_s2_t_cli_1")}
                     <br />
-                    (K-WATER)
+                    {isKorean && "(K-WATER)"}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-b border-r">
-                    화성 송산 그린시티
-                  </td>
-                  <td className="px-2 py-2 lg:p-4 border-r border-b">상수도</td>
-                </tr>
-                <tr className="bg-white ">
-                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
-                  <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    부산 EDC 2-4 공구
+                    {t("result_s2_t_site_1")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    상수도, 하수도
+                    {" "}
+                    {t("result_s2_t_water")}
                   </td>
                 </tr>
                 <tr className="bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    부산 EDC 2-5 공구
+                    {t("result_s2_t_site_2")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    상수도, 하수도
+                    {t("result_s2_t_water2")}
+                  </td>
+                </tr>
+                <tr className="bg-white ">
+                  <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    {t("result_s2_t_site_3")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r border-b">
+                    {t("result_s2_t_water2")}
                   </td>
                 </tr>
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    수원 삼성전자
+                    {t("result_s2_t_site_4")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    공업용수
+                    {t("result_s2_t_ind_water")}
                   </td>
                 </tr>
                 <tr className="bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    보령/부여 관로 이설
+                    {t("result_s2_t_site_5")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b ">
-                    광역상수도
+                    {t("result_s2_t_metro_water")}
                   </td>
                 </tr>
                 <tr className="border-b bg-white  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
-                  <td className="px-2 py-2 lg:p-4 border-r">시흥 광역상수도</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">광역상수도</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_6")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_metro_water")}
+                  </td>
                 </tr>
                 <tr className=" bg-white ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국농어촌공사
+                    {t("result_s2_t_cli_2")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b">
-                    수원 이목지구{" "}
+                    {t("result_s2_t_site_7")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r border-b ">
-                    상수도
+                    {t("result_s2_t_agri_water")}
                   </td>
                 </tr>
                 <tr className="border-b bg-white odd:bg-gray-100 ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold"></td>
-                  <td className="px-2 py-2 lg:p-4 border-r">인천 검단지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">농업용수</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_8")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_water")}
+                  </td>
                 </tr>
                 <tr className="border-b bg-white odd:bg-gray-100  ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국수력원자력
+                    {t("result_s2_t_cli_3")}
                   </td>
                   <td className="px-2 py-2 lg:p-4 border-r">
-                    울진 원자력발전소
+                    {t("result_s2_t_site_9")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">해수취수관</td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_seawater")}
+                  </td>
                 </tr>
                 <tr className="border-b bg-white  odd:bg-gray-100">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    남양주시
+                    {t("result_s2_t_cli_4")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">남양주 조안면</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">하수 압송관</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_10")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_sewage_pressure")}
+                  </td>
                 </tr>
                 <tr className="border-b bg-white  odd:bg-gray-100">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    송파구청
+                    {t("result_s2_t_cli_5")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">송파구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">하천유지용수</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_11")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_river_water")}
+                  </td>
                 </tr>
                 <tr className="border-b bg-white odd:bg-gray-100 ">
                   <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                    한국토지주택공사 (LH){" "}
+                    {t("result_s2_t_cli_6")}
                   </td>
-                  <td className="px-2 py-2 lg:p-4 border-r">성남 고등지구</td>
-                  <td className="px-2 py-2 lg:p-4 border-r ">오수 압송관</td>
+                  <td className="px-2 py-2 lg:p-4 border-r">
+                    {t("result_s2_t_site_12")}
+                  </td>
+                  <td className="px-2 py-2 lg:p-4 border-r ">
+                    {t("result_s2_t_sewage_pressure2")}
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -393,41 +475,49 @@ function Result() {
       {/* section3. 파트너 */}
       <div className="flex flex-col py-10 lg:py-24 text-center">
         <div className="px-[20px] font-semibold text-[30px] lg:text-[40px]">
-          파트너
+          {t("result_s3_title")}
         </div>
         <div className="px-[20px] text-[18px] lg:text-[28px] text-gray-500 pt-2">
-          다양한 파트너들과 협력하고 있습니다
+          {t("result_s3_subtitle")}
         </div>
         <div className="px-[4px] lg:px-44  pt-6 lg:pt-8 grid grid-cols-5  items-center  gap-8  text-[10px] lg:text-[20px] ">
           <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2 ">
             <div>
               <BuildingLibraryIcon className="w-5 h-5 lg:w-10 lg:h-10  mx-auto" />
             </div>
-            <div>지자체</div>
+            <div>{t("result_s3_c1")}</div>
           </div>
           <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
             <div>
               <BuildingOffice2Icon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
             </div>
-            <div>공공기관</div>
+            <div>{t("result_s3_c2")}</div>
           </div>
           <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
             <div>
               <TruckIcon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
             </div>
-            <div>건설사</div>
+            <div>
+              {t("result_s3_c3")}
+              {/* <br />
+              {isEnglish && <>&nbsp;</>} */}
+            </div>
           </div>
           <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
             <div>
               <DocumentTextIcon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
             </div>
-            <div>엔지니어링</div>
+            <div>
+              {t("result_s3_c4")}
+              {/* <br />
+              {isEnglish && <>&nbsp;</>} */}
+            </div>
           </div>
           <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
             <div>
               <HandThumbUpIcon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
             </div>
-            <div>협력업체</div>
+            <div>{t("result_s3_c5")}</div>
           </div>
           <div className="flex  justify-center lg:h-[88px]  ">
             <img
@@ -552,12 +642,12 @@ function Result() {
           </div> */}
         </div>
       </div>
-      {/* section4. 기타실적 */}
+      {/* section4. 특허 */}
       <div className="bg-[#f4f4f4] py-10 lg:py-24">
         <div>
           <div>
             <div className="px-[20px] lg:px-72 font-semibold text-[30px] lg:text-[40px]">
-              특허 실적
+              {t("result_s4_title")}
             </div>
             {/* <div className="text-[16px] lg:text-[28px] pt-2 text-gray-500">
               발명 특허 20건, 디자인 특허 2건, 실용실안 1건
@@ -718,10 +808,10 @@ function Result() {
             </Slider>
           </div>
           <div className="font-normal text-[20px] lg:text-[28px] lg:pt-10 text-center">
-            특허
+            {t("result_s4_patent")}
           </div>
           <div className="text-[14px] lg:text-[16px] text-gray-500 text-center">
-            특허 19건, 실용실안 1건, 디자인등록 2건
+            {t("result_s4_patent_sub")}
           </div>
           <div className="py-6 lg:py-10">
             {/* for PC table */}
@@ -729,241 +819,251 @@ function Result() {
               <table className="table-auto lg:w-[1000px]  border-l border-t  mx-auto shadow  ">
                 <thead className="border-b">
                   <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
-                    <th className="pl-2 lg:pl-4 border-r text-left">구분</th>
-                    <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                      특허등록번호
+                    <th className="pl-2 lg:pl-4 border-r text-left">
+                      {isKorean && "구분"}
                     </th>
-                    <th className="pl-2 lg:pl-4 border-r text-left">특허명</th>
+                    <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left lg:w-[180px]">
+                      {t("result_s4_patent_t_r1_2")}
+                    </th>
+                    <th className="pl-2 lg:pl-4 border-r text-left">
+                      {" "}
+                      {t("result_s4_patent_t_r1_3")}
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
                   <tr className="border-b bg-white odd:bg-gray-100">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-0869052호
+                      {t("result_s4_patent_t_r2_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관재의 누수와 파손감지 및 관로 위치확인이 용이한 감지관
+                      {t("result_s4_patent_t_r2_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-0908137호{" "}
+                      {t("result_s4_patent_t_r3_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관재 연결부 감지장치
+                      {t("result_s4_patent_t_r3_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-0927464호{" "}
+                      {t("result_s4_patent_t_r4_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관재 연결부 감지장치
+                      {t("result_s4_patent_t_r4_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1103310호{" "}
+                      {t("result_s4_patent_t_r5_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      손상감지 테이프가 구비된 매설관 관리시스템
+                      {t("result_s4_patent_t_r5_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1173592호{" "}
+                      {t("result_s4_patent_t_r6_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      매설관의 파손방지와 파손된 위치를 확인하는 시스템 및 그
-                      운영방법
+                      {t("result_s4_patent_t_r6_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1281507호{" "}
+                      {t("result_s4_patent_t_r7_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관 연결부의 부식방지용 튜브
+                      {t("result_s4_patent_t_r7_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1281508호{" "}
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">관 이음장치</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100 ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1412605호{" "}
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">관 이음장치</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100 ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1575739호{" "}
+                      {t("result_s4_patent_t_r8_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      지하매설물 관리시스템 및 방법
+                      {" "}
+                      {t("result_s4_patent_t_r8_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1690542호{" "}
+                      {t("result_s4_patent_t_r9_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수감지장치 그것의 제조방법, 그에 적합한 체결장치 그리고
-                      이를 적용한 누수감지시스템
+                      {" "}
+                      {t("result_s4_patent_t_r9_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1898447호{" "}
+                      {t("result_s4_patent_t_r10_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수 감지시트 및 그를 이용한 누수감지장치
+                      {t("result_s4_patent_t_r10_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1946956호{" "}
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">동공감지센서</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100 ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1971473호{" "}
+                      {t("result_s4_patent_t_r11_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      관이음부 결함감지 센서 및 이를 이용한 결함감지시스템
+                      {t("result_s4_patent_t_r11_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2052343호{" "}
+                      {t("result_s4_patent_t_r12_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수감지 센서 및 그를 이용한 누수감지시스템
+                      {t("result_s4_patent_t_r12_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2052349호{" "}
+                      {t("result_s4_patent_t_r13_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수감지장치 및 이를 적용한 누수감지시스템
+                      {" "}
+                      {t("result_s4_patent_t_r13_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2120724호{" "}
+                      {t("result_s4_patent_t_r14_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      감지선시트부착센서 및 감지선부착센서를 관이음부에 부착하는
-                      방법
+                      {t("result_s4_patent_t_r14_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2139816호{" "}
+                      {t("result_s4_patent_t_r15_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      지하시설물 파손예방시트 및 그의 제조방법
+                      {t("result_s4_patent_t_r15_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      특허
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2322701호{" "}
+                      {t("result_s4_patent_t_r16_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      UF코드패드부와 지하시설물 측정용 AI로봇모듈을 통한
-                      현장지능형 지하시설물 안전관리장치 및 방법
+                      {t("result_s4_patent_t_r16_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      실용실안
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 20-0471757호{" "}
+                      {t("result_s4_patent_t_r17_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      매설관 손상 위치 감지를 위한 감지 테이프
+                      {t("result_s4_patent_t_r17_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      디자인등록
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 30-0703793호{" "}
+                      {t("result_s4_patent_t_r18_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      파이프 연결부 누설 감지 보호 커버
+                      {t("result_s4_patent_t_r18_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      디자인등록
+                      {t("result_s4_patent_t_r2_1")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 30-0703793-01호{" "}
+                      {t("result_s4_patent_t_r19_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      파이프 연결부 누설 감지 보호 커버
+                      {t("result_s4_patent_t_r19_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100 ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s4_patent_t_r20_1")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s4_patent_t_r20_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s4_patent_t_r20_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100 ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s4_patent_t_r21_1")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s4_patent_t_r21_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s4_patent_t_r21_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100 ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s4_patent_t_r21_1")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s4_patent_t_r22_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s4_patent_t_r22_3")}
                     </td>
                   </tr>
                 </tbody>
@@ -975,176 +1075,183 @@ function Result() {
                 <thead className="border-b">
                   <tr className="bg-[#232976] text-gray-300 font-bold text-[12px] lg:text-[18px] ">
                     <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                      특허등록번호
+                      {t("result_s4_patent_t_r1_2")}
                     </th>
-                    <th className="pl-2 lg:pl-4 border-r text-left">특허명</th>
+                    <th className="pl-2 lg:pl-4 border-r text-left">
+                      {" "}
+                      {t("result_s4_patent_t_r1_3")}
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
                   <tr className="border-b bg-white odd:bg-gray-100">
                     <td className="px-2 py-2 lg:p-4 border-r w-1/3">
-                      제 10-0869052호
+                      {t("result_s4_patent_t_r2_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관재의 누수와 파손감지 및 관로 위치확인이 용이한 감지관
+                      {t("result_s4_patent_t_r2_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-0908137호{" "}
+                      {t("result_s4_patent_t_r3_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관재 연결부 감지장치
+                      {t("result_s4_patent_t_r3_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-0927464호{" "}
+                      {t("result_s4_patent_t_r4_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관재 연결부 감지장치
+                      {t("result_s4_patent_t_r4_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1103310호{" "}
+                      {t("result_s4_patent_t_r5_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      손상감지 테이프가 구비된 매설관 관리시스템
+                      {t("result_s4_patent_t_r5_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1173592호{" "}
+                      {t("result_s4_patent_t_r6_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      매설관의 파손방지와 파손된 위치를 확인하는 시스템 및 그
-                      운영방법
+                      {t("result_s4_patent_t_r6_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1281507호{" "}
+                      {t("result_s4_patent_t_r7_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      배관 연결부의 부식방지용 튜브
+                      {t("result_s4_patent_t_r7_23")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1281508호{" "}
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">관 이음장치</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100 ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1412605호{" "}
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">관 이음장치</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100 ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1575739호{" "}
+                      {t("result_s4_patent_t_r8_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      지하매설물 관리시스템 및 방법
+                      {" "}
+                      {t("result_s4_patent_t_r8_23")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1690542호{" "}
+                      {t("result_s4_patent_t_r9_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수감지장치 그것의 제조방법, 그에 적합한 체결장치 그리고
-                      이를 적용한 누수감지시스템
+                      {t("result_s4_patent_t_r9_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1898447호{" "}
+                      {t("result_s4_patent_t_r10_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수 감지시트 및 그를 이용한 누수감지장치
+                      {t("result_s4_patent_t_r10_3")}{" "}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1946956호{" "}
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">동공감지센서</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100 ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-1971473호{" "}
+                      {t("result_s4_patent_t_r11_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      관이음부 결함감지 센서 및 이를 이용한 결함감지시스템
+                      {t("result_s4_patent_t_r11_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2052343호{" "}
+                      {t("result_s4_patent_t_r12_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수감지 센서 및 그를 이용한 누수감지시스템
+                      {t("result_s4_patent_t_r12_3")}{" "}
+                    </td>
+                  </tr>
+
+                  <tr className="border-b bg-white odd:bg-gray-100 ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s4_patent_t_r13_2")}{" "}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s4_patent_t_r13_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2052349호{" "}
+                      {t("result_s4_patent_t_r14_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      누수감지장치 및 이를 적용한 누수감지시스템
+                      {t("result_s4_patent_t_r14_3")}{" "}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2120724호{" "}
+                      {t("result_s4_patent_t_r15_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      감지선시트부착센서 및 감지선부착센서를 관이음부에 부착하는
-                      방법
+                      {t("result_s4_patent_t_r15_3")}{" "}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2139816호{" "}
+                      {t("result_s4_patent_t_r16_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      지하시설물 파손예방시트 및 그의 제조방법
+                      {t("result_s4_patent_t_r16_3")}{" "}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 10-2322701호{" "}
+                      {t("result_s4_patent_t_r17_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      UF코드패드부와 지하시설물 측정용 AI로봇모듈을 통한
-                      현장지능형 지하시설물 안전관리장치 및 방법
+                      {t("result_s4_patent_t_r17_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 20-0471757호{" "}
+                      {t("result_s4_patent_t_r18_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      매설관 손상 위치 감지를 위한 감지 테이프
+                      {t("result_s4_patent_t_r18_3")}{" "}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 30-0703793호{" "}
+                      {t("result_s4_patent_t_r19_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      파이프 연결부 누설 감지 보호 커버
+                      {t("result_s4_patent_t_r19_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      제 30-0703793-01
+                      {t("result_s4_patent_t_r20_2")}{" "}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      파이프 연결부 누설 감지 보호 커버
+                      {t("result_s4_patent_t_r20_3")}{" "}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100 ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s4_patent_t_r21_2")}{" "}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s4_patent_t_r21_3")}{" "}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100 ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s4_patent_t_r22_2")}{" "}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s4_patent_t_r22_3")}{" "}
                     </td>
                   </tr>
                 </tbody>
@@ -1154,10 +1261,10 @@ function Result() {
           </div>
           <div>
             <div className="font-normal text-[20px] lg:text-[28px] pt-10 text-center">
-              특허출원
+              {t("result_s4_patentapp")}
             </div>
             <div className="text-[14px] lg:text-[16px] text-gray-500 text-center">
-              코위드원은 계속 연구하며 발전하고 있습니다
+              {t("result_s4_patentapp_sub")}
             </div>
             <div className="py-6 lg:py-10">
               {/* for PC table */}
@@ -1166,13 +1273,13 @@ function Result() {
                   <thead className="border-b">
                     <tr className="bg-[#232976] text-gray-300  font-bold text-[14px] lg:text-[18px] ">
                       <th className="pl-2 lg:pl-4 border-r text-left">
-                        출원일
+                        {t("result_s4_patentapp_t_r1_1")}
                       </th>
                       <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                        출원번호
+                        {t("result_s4_patentapp_t_r1_2")}
                       </th>
                       <th className="pl-2 lg:pl-4 border-r text-left">
-                        특허출원명
+                        {t("result_s4_patentapp_t_r1_3")}
                       </th>
                     </tr>
                   </thead>
@@ -1182,10 +1289,10 @@ function Result() {
                         2020.12.30
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2020-0187127호
+                        {t("result_s4_patentapp_t_r2_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        누수감지센서 및 그를 이용한 방법
+                        {t("result_s4_patentapp_t_r2_3")}
                       </td>
                     </tr>
                     <tr className="border-b bg-white odd:bg-gray-100 ">
@@ -1193,11 +1300,10 @@ function Result() {
                         2020.12.30
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2020-0187181호
+                        {t("result_s4_patentapp_t_r3_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        누수감지센서 및 이를 삽입하는 센서함체부 및 센서함체부를
-                        삽입하는 보호커버
+                        {t("result_s4_patentapp_t_r3_3")}
                       </td>
                     </tr>
                     <tr className="border-b bg-white odd:bg-gray-100 ">
@@ -1205,10 +1311,10 @@ function Result() {
                         2020.12.30
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2020-0187204호
+                        {t("result_s4_patentapp_t_r4_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        누수감지센서 및 센서함체부를 삽입하는 보호커버{" "}
+                        {t("result_s4_patentapp_t_r4_3")}
                       </td>
                     </tr>
                     <tr className="border-b bg-white odd:bg-gray-100 ">
@@ -1216,10 +1322,10 @@ function Result() {
                         2021.05.20
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2021-0065020호
+                        {t("result_s4_patentapp_t_r5_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        감지선 손상여부 판단장치{" "}
+                        {t("result_s4_patentapp_t_r5_3")}
                       </td>
                     </tr>
                     <tr className="border-b bg-white odd:bg-gray-100 ">
@@ -1227,10 +1333,10 @@ function Result() {
                         2021.09.09
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2021-0120400호
+                        {t("result_s4_patentapp_t_r6_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        감지선 손상여부 판단장치 및 그의 방법{" "}
+                        {t("result_s4_patentapp_t_r6_3")}
                       </td>
                     </tr>
                   </tbody>
@@ -1242,53 +1348,52 @@ function Result() {
                   <thead className="border-b">
                     <tr className="bg-[#232976] text-gray-300 font-bold text-[12px]">
                       <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left w-2/5">
-                        특허출원번호
+                        {t("result_s4_patentapp_t_r1_2")}
                       </th>
                       <th className="pl-2 lg:pl-4 border-r text-left">
-                        특허출원명
+                        {t("result_s4_patentapp_t_r1_3")}
                       </th>
                     </tr>
                   </thead>
                   <tbody className="text-[12px] ">
                     <tr className="border-b bg-white odd:bg-gray-100 ">
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2020-0187127호
+                        {t("result_s4_patentapp_t_r2_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        누수감지센서 및 그를 이용한 방법
+                        {t("result_s4_patentapp_t_r2_3")}
                       </td>
                     </tr>{" "}
                     <tr className="border-b bg-white odd:bg-gray-100 ">
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2020-0187181호{" "}
+                        {t("result_s4_patentapp_t_r3_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        누수감지센서 및 이를 삽입하는 센서함체부 및 센서함체부를
-                        삽입하는 보호커버{" "}
+                        {t("result_s4_patentapp_t_r3_3")}
                       </td>
                     </tr>{" "}
                     <tr className="border-b bg-white odd:bg-gray-100 ">
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2020-0187204호
+                        {t("result_s4_patentapp_t_r4_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        누수감지센서 및 센서함체부를 삽입하는 보호커버{" "}
+                        {t("result_s4_patentapp_t_r4_3")}
                       </td>
                     </tr>{" "}
                     <tr className="border-b bg-white odd:bg-gray-100 ">
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2021-0065020호{" "}
+                        {t("result_s4_patentapp_t_r5_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        감지선 손상여부 판단장치{" "}
+                        {t("result_s4_patentapp_t_r5_3")}
                       </td>
                     </tr>{" "}
                     <tr className="border-b bg-white odd:bg-gray-100 ">
                       <td className="px-2 py-2 lg:p-4 border-r">
-                        제 2021-0120400호{" "}
+                        {t("result_s4_patentapp_t_r6_2")}
                       </td>
                       <td className="px-2 py-2 lg:p-4 border-r ">
-                        감지선 손상여부 판단장치 및 그의 방법{" "}
+                        {t("result_s4_patentapp_t_r6_3")}
                       </td>
                     </tr>
                   </tbody>
@@ -1299,15 +1404,13 @@ function Result() {
         </div>
       </div>
 
+      {/* section5. 기타실적 */}
       <div className="py-10 lg:py-24 ">
         <div>
           <div>
             <div className="px-[20px] lg:px-72 font-semibold text-[30px] lg:text-[40px]">
-              기타 실적
+              {t("result_s5_title")}
             </div>
-            {/* <div className="text-[16px] lg:text-[28px] pt-2 text-gray-500">
-              혁신제품 인증 2건, 대통령상 포함 00건 수상
-            </div> */}
           </div>
           <div className="py-6 lg:py-10 px-[20px] lg:w-[1100px] lg:mx-auto ">
             <Slider {...settings} className=" ">
@@ -1419,10 +1522,10 @@ function Result() {
             </Slider>
           </div>
           <div className="font-normal text-[20px] lg:text-[28px] lg:pt-10 text-center">
-            수상 및 인증
+            {t("result_s5_subtitle")}
           </div>
           <div className="text-[14px] lg:text-[16px] text-gray-500 text-center">
-            혁신제품 인증 2건 및 대통령상 포함 10건의 수상 실적!
+            {t("result_s5_subtitle_description")}
           </div>
           <div className="py-6 lg:py-10">
             {/* for PC table */}
@@ -1430,145 +1533,178 @@ function Result() {
               <table className="table-auto lg:w-[1000px]  border-l border-t  mx-auto shadow  ">
                 <thead className="border-b">
                   <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
-                    <th className="pl-2 lg:pl-4 border-r text-left">구분</th>
+                    <th className="pl-2 lg:pl-4 border-r text-left">
+                      {isKorean && "구분"}
+                    </th>
                     <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                      내용
+                      {t("result_s5_t_r1_2")}
                     </th>
                     <th className="pl-2 lg:pl-4 border-r text-left">
-                      주관기관
+                      {t("result_s5_t_r1_3")}
                     </th>
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
                   <tr className="border-b bg-white  odd:bg-gray-100 ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      인증
+                      {t("result_s5_t_certifi")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      혁신제품 (상하수도관로 파손예방 및 누수감지 시스템)
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">환경부</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      인증
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      혁신제품 (싱크홀을 예방하는 AR기술을 접목한
-                      SinkTree시스템)
+                      {t("result_s5_t_r2_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      중소벤처기업부
+                      {t("result_s5_t_r2_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      인증
+                      {t("result_s5_t_certifi")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r3_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s5_t_r3_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_certifi")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">ISO 9001:2015</td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      한국국제규격인증원
+                      {t("result_s5_t_r4_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      인증
+                      {t("result_s5_t_certifi")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
                       ISO 14001:2015
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      한국국제규격인증원
+                      {t("result_s5_t_r4_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      인증
+                      {t("result_s5_t_certifi")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      우수발명품 우선구매선정
+                      {t("result_s5_t_r6_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      한국발명진흥회
+                      {t("result_s5_t_r6_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">특허청 표창장</td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">특허청</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
+                      {t("result_s5_t_certifi")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      한국방재협회 표창장
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">한국방재협회</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">대통령상</td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">행정자치부</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      대한민국 우수특허 대상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">한국일보</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      물관리 녹색기술상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">한국환경공단</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      국민안전처 표창장
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">국민안전처</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      스마트시티 비즈니스페어 장관상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">국토교통부</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      경기도 안전산업육성오디션 우수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">경기도</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      대한민국환경대상
+                      {" "}
+                      {t("result_s5_t_r7_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      산업통상자원부
+                      {" "}
+                      {t("result_s5_t_r7_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r8_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r8_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {" "}
+                      {t("result_s5_t_r9_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r9_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r10_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r10_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r11_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r11_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r12_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r12_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r13_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r13_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r14_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r14_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_awards")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r15_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s5_t_r15_3")}
                     </td>
                   </tr>
                 </tbody>
@@ -1580,33 +1716,35 @@ function Result() {
                 <thead className="border-b">
                   <tr className="bg-[#232976] text-gray-300 font-bold text-[14px] lg:text-[18px] ">
                     <th className="pl-2 lg:pl-4 py-2 lg:py-6  border-r text-left">
-                      내용
+                      {t("result_s5_t_r1_2")}
                     </th>
                     <th className="pl-2 lg:pl-4 border-r text-left">
-                      주관기관
+                      {t("result_s5_t_r1_3")}
                     </th>
                   </tr>
                 </thead>
                 <tbody className="text-[12px] lg:text-[16px]">
                   <tr className="border-b bg-white  odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      혁신제품 (상하수도관로 파손예방 및 누수감지 시스템)
+                      {t("result_s5_t_r2_2")}
                     </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">환경부</td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r2_3")}
+                    </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      혁신제품 (싱크홀을 예방하는 AR기술을 접목한
-                      SinkTree시스템)
+                      {t("result_s5_t_r3_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      중소벤처기업부
+                      {t("result_s5_t_r3_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="px-2 py-2 lg:p-4 border-r">ISO 9001:2015</td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      한국국제규격인증원
+                      {t("result_s5_t_r4_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
@@ -1614,67 +1752,97 @@ function Result() {
                       ISO 14001:2015
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      한국국제규격인증원
+                      {t("result_s5_t_r4_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      우수발명품 우선구매선정
+                      {t("result_s5_t_r6_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      한국발명진흥회
+                      {t("result_s5_t_r6_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">특허청 표창장</td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">특허청</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      한국방재협회 표창장
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">한국방재협회</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">대통령상</td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">행정자치부</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      대한민국 우수특허 대상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">한국일보</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      물관리 녹색기술상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">한국환경공단</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      국민안전처 표창장
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">국민안전처</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      스마트시티 비즈니스페어 장관상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">국토교통부</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      경기도 안전산업육성오디션 우수상
-                    </td>
-                    <td className="px-2 py-2 lg:p-4 border-r ">경기도</td>
-                  </tr>
-                  <tr className="border-b bg-white odd:bg-gray-100  ">
-                    <td className="px-2 py-2 lg:p-4 border-r">
-                      대한민국환경대상
+                      {" "}
+                      {t("result_s5_t_r7_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      산업통상자원부
+                      {" "}
+                      {t("result_s5_t_r7_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r8_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r8_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {" "}
+                      {t("result_s5_t_r9_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r9_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r10_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r10_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r11_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r11_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r12_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r12_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r13_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r13_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r14_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {" "}
+                      {t("result_s5_t_r14_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r15_2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s5_t_r15_3")}
                     </td>
                   </tr>
                 </tbody>
