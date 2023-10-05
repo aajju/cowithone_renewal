@@ -5,22 +5,7 @@ import { useTranslation } from "react-i18next";
 function Faq() {
   const language = useRecoilValue(languageState);
   const isKorean = language === "ko";
-  const isEnglish = language === "en";
   const { t } = useTranslation();
-  // 언어에 따른 폰트 크기 설정
-  const fontSizeKorean = {
-    base: "14px",
-    md: "20px",
-    lg: "28px",
-  };
-
-  const fontSizeEnglish = {
-    base: "12px", // 영어일 때의 기본 폰트 크기
-    md: "16px",
-    lg: "24px",
-  };
-
-  const fontSize = isKorean ? fontSizeKorean : fontSizeEnglish;
 
   return (
     <div className="px-[20px] lg:px-[150px] lg:w-[1000px] mx-auto mb-20">

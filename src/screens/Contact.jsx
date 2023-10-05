@@ -1,27 +1,8 @@
 import MapContainer from "../Components/MapContainer";
 
-import { useRecoilValue } from "recoil";
-import { languageState } from "../recoil/languageState"; // Recoil 상태 파일의 경로를 정확하게 지정하세요.
 import { useTranslation } from "react-i18next";
 function Contact() {
-  const language = useRecoilValue(languageState);
-  const isKorean = language === "ko";
-  const isEnglish = language === "en";
   const { t } = useTranslation();
-  // 언어에 따른 폰트 크기 설정
-  const fontSizeKorean = {
-    base: "14px",
-    md: "20px",
-    lg: "28px",
-  };
-
-  const fontSizeEnglish = {
-    base: "12px", // 영어일 때의 기본 폰트 크기
-    md: "16px",
-    lg: "24px",
-  };
-
-  const fontSize = isKorean ? fontSizeKorean : fontSizeEnglish;
 
   return (
     <div className="mx-auto mb-20">

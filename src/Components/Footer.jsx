@@ -7,15 +7,13 @@ import { useTranslation } from "react-i18next";
 function Footer() {
   const language = useRecoilValue(languageState);
   const isKorean = language === "ko";
-  const isEnglish = language === "en";
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="bg-[#ECECEC99] px-[20px] py-[40px] lg:px-[150px] lg:py-[80px] space-y-4">
       <img src={logoPath} alt="Cowithone" width="200" className="py-1" />
       <div className="text-[14px] lg:text-[16px] space-y-1">
         <h6>
-          {" "}
           {t("footer_company")}
           {isKorean && t("footer_ceo")}
         </h6>

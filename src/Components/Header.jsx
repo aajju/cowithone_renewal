@@ -20,7 +20,7 @@ function Header() {
   const { scrollY } = useScroll();
   const { t, i18n } = useTranslation();
 
-  const [language, setLanguage] = useRecoilState(languageState); // Recoil 상태를 사용합니다.
+  const [, setLanguage] = useRecoilState(languageState); // Recoil 상태를 사용합니다.
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 

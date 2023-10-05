@@ -46,7 +46,6 @@ import { useTranslation } from "react-i18next";
 function Home() {
   const language = useRecoilValue(languageState);
   const isKorean = language === "ko";
-  const isEnglish = language === "en";
   const { t } = useTranslation();
 
   // 언어에 따른 폰트 크기 설정
