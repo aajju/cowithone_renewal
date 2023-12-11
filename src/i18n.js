@@ -81,7 +81,7 @@ const resources = {
       home_s6_a2:
         "The lifespan of detection cables buried underground is influenced by external pressure and groundwater. Our used detection cables are coated with lead-free Teflon coating, known for its excellent water resistance and weather resistance, followed by PVC coating. These cables are inserted into sheets with butyl rubber, making them suitable for long-term, permanent use. Leak detection sensors are embedded within protective covers (or sensor enclosures), ensuring their long-term, permanent usability.",
       home_s6_q3:
-        "What are the additional points awarded when using the CoVID-One Solution?",
+        "What are the additional points awarded when using the COWITHONE's Solution?",
       home_s6_a3:
         "According to a press release from the Ministry of Land, Infrastructure and Transport on July 20, 2022, to promote smart construction, a minimum score (7 points) for smart technology has been introduced in the evaluation of technical bids such as turnkey projects. For smart turnkey projects where smart technology application is a bidding condition, 10 to 20 points are allocated. In addition, for non-turnkey projects, 'smart technology' has been added as an evaluation criterion in the engineering comprehensive assessment, ensuring that smart technology is considered from the design stage. Our system is currently being adopted and implemented in the government's smart city pilot zones, namely Busan EDC site and Sejong City 5-1 Development, and by incorporating recognized smart technology into our system design, additional points can be awarded in the bidding process.",
       home_s6_morebtn: "More FAQs",

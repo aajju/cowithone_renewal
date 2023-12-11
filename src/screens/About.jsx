@@ -15,6 +15,8 @@ import psps_thumb3 from "../assets/img/about/psps_thumb3.png";
 import etc_thumb1 from "../assets/img/about/etc_thumb1.png";
 import etc_thumb2 from "../assets/img/about/etc_thumb2.png";
 import hammer from "../assets/img/about/hammer.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useRecoilValue } from "recoil";
 import { languageState } from "../recoil/languageState"; // Recoil 상태 파일의 경로를 정확하게 지정하세요.
 import { useTranslation } from "react-i18next";
@@ -54,7 +56,7 @@ function About() {
         <div className="grid grid-cols-2 lg:grid-cols-4 place-content-center  lg:px-72 gap-4 pb-20 ">
           <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
             <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[30px]  mx-auto"
                 src={thumb1}
                 alt="thumb1"
@@ -74,7 +76,7 @@ function About() {
 
           <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
             <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[30px]  mx-auto"
                 src={thumb2}
                 alt="thumb2"
@@ -94,7 +96,7 @@ function About() {
 
           <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
             <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[30px]  mx-auto"
                 src={thumb3}
                 alt="thumb3"
@@ -114,7 +116,7 @@ function About() {
 
           <div className="w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] border  rounded-xl flex flex-col justify-between p-[10px] lg:p-[20px] shadow-lg ">
             <div className="w-[60px] h-[60px] bg-[#D9D9D933] flex items-center rounded-lg ">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[30px]  mx-auto"
                 src={thumb4}
                 alt="thumb4"
@@ -595,7 +597,7 @@ function About() {
           <div className=" flex flex-col space-y-12 lg:pl-14  ">
             <div className="flex flex-col lg:flex-row items-center space-y-4 lg:mb-10">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={bps_thumb1}
                   alt="bps_thumb1"
@@ -614,7 +616,7 @@ function About() {
 
             <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={bps_thumb2}
                   alt="bps_thumb2"
@@ -636,7 +638,7 @@ function About() {
 
             <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={bps_thumb3}
                   alt="bps_thumb3"
@@ -838,7 +840,7 @@ function About() {
             <div className=" flex flex-col space-y-12 lg:pl-14  ">
               <div className="flex flex-col lg:flex-row items-center space-y-4">
                 <div className="w-[180px] h-[180px]">
-                  <img
+                  <LazyLoadImage
                     className="object-fill"
                     src={sts_thumb1}
                     alt="sts_thumb1"
@@ -857,7 +859,7 @@ function About() {
 
               <div className="flex flex-col lg:flex-row items-center space-y-4">
                 <div className="w-[180px] h-[180px]">
-                  <img
+                  <LazyLoadImage
                     className="object-fill"
                     src={sts_thumb2}
                     alt="sts_thumb2"
@@ -877,7 +879,7 @@ function About() {
 
               <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
                 <div className="w-[180px] h-[180px]">
-                  <img
+                  <LazyLoadImage
                     className="object-fill"
                     src={sts_thumb3}
                     alt="sts_thumb3"
@@ -1171,7 +1173,7 @@ function About() {
           <div className=" flex flex-col space-y-12 lg:pl-14  ">
             <div className="flex flex-col lg:flex-row items-center space-y-4">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={psps_thumb1}
                   alt="psps_thumb1"
@@ -1192,7 +1194,7 @@ function About() {
 
             <div className="flex flex-col lg:flex-row items-center space-y-4 ">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={psps_thumb2}
                   alt="psps_thumb2"
@@ -1213,7 +1215,7 @@ function About() {
 
             <div className="flex flex-col lg:flex-row items-center space-y-4 mb-10">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={psps_thumb3}
                   alt="psps_thumb3"
@@ -1251,7 +1253,7 @@ function About() {
           <div className=" flex flex-col space-y-12 lg:pl-14  lg:pt-12 ">
             <div className="flex flex-col lg:flex-row items-center space-y-4">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={etc_thumb1}
                   alt="etc_thumb1"
@@ -1285,7 +1287,7 @@ function About() {
             </div>
             <div className="flex flex-col lg:flex-row items-center space-y-4">
               <div className="w-[180px] h-[180px]">
-                <img
+                <LazyLoadImage
                   className="object-fill"
                   src={etc_thumb2}
                   alt="etc_thumb2"
@@ -1336,7 +1338,7 @@ function About() {
           </div>
           <div className="pt-2 lg:pt-8 grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-8 ">
             <div className="bg-white flex flex-col text-black items-center py-4 rounded-lg space-y-2 w-44 lg:w-60">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[34px] lg:w-[40px] "
                 src={hammer}
                 alt="법망치"
@@ -1349,7 +1351,7 @@ function About() {
               </div>
             </div>
             <div className="bg-white flex flex-col text-black items-center py-4 rounded-lg space-y-2 w-44 lg:w-60">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[40px] "
                 src={hammer}
                 alt="법망치"
@@ -1362,7 +1364,7 @@ function About() {
               </div>
             </div>
             <div className="bg-white flex flex-col text-black items-center py-4  rounded-lg space-y-2 w-44 lg:w-60">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[40px] "
                 src={hammer}
                 alt="법망치"
@@ -1375,7 +1377,7 @@ function About() {
               </div>
             </div>
             <div className="bg-white flex flex-col text-black items-center py-4 rounded-lg space-y-2 w-44 lg:w-60">
-              <img
+              <LazyLoadImage
                 className="object-fill w-[40px] "
                 src={hammer}
                 alt="법망치"

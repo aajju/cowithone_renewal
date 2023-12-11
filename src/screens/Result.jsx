@@ -1,3 +1,4 @@
+// import eng_dmcm from "../assets/LazyLoadImage/partner/eng_dmcm.png";
 import loc_namyangju from "../assets/img/partner/loc_namyangju.png";
 import pub_kwater from "../assets/img/partner/pub_kwater.png";
 import con_kukdong from "../assets/img/partner/con_kukdong.png";
@@ -9,7 +10,6 @@ import loc_hwasung from "../assets/img/partner/loc_hwasung.png";
 import con_kumho from "../assets/img/partner/con_kumho.png";
 import con_hdc from "../assets/img/partner/con_hdc.png";
 import con_taeyoung from "../assets/img/partner/con_taeyoung.png";
-// import eng_dmcm from "../assets/img/partner/eng_dmcm.png";
 import eng_dohwa from "../assets/img/partner/eng_dohwa.png";
 import eng_yooshin from "../assets/img/partner/eng_yooshin.png";
 import etc_becs from "../assets/img/partner/etc_becs.png";
@@ -54,6 +54,8 @@ import iso1 from "../assets/img/prize/iso1.png";
 import iso2 from "../assets/img/prize/iso2.png";
 import purchase1 from "../assets/img/prize/purchase1.png";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import {
   BuildingLibraryIcon,
   BuildingOffice2Icon,
@@ -519,42 +521,50 @@ function Result() {
             <div>{t("result_s3_c5")}</div>
           </div>
           <div className="flex  justify-center lg:h-[88px]  ">
-            <img
+            <LazyLoadImage
               src={loc_namyangju}
               alt="남양주시"
               className="object-contain"
             />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
-            <img
+            <LazyLoadImage
               src={pub_kwater}
               alt="한국수자원공사"
               className="object-contain"
             />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
-            <img src={con_kukdong} alt="극동건설" className="object-contain" />
+            <LazyLoadImage
+              src={con_kukdong}
+              alt="극동건설"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
-            <img
+            <LazyLoadImage
               src={eng_kunhwa}
               alt="건화엔지니어링"
               className="object-contain"
             />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
-            <img
+            <LazyLoadImage
               src={etc_movements}
               alt="무브먼츠"
               className="object-contain"
             />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
-            <img src={loc_songpa} alt="송파구청" className="object-contain" />
+            <LazyLoadImage
+              src={loc_songpa}
+              alt="송파구청"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img
+            <LazyLoadImage
               src={pub_lh}
               alt="한국토지주택공사"
               className="object-contain"
@@ -562,11 +572,15 @@ function Result() {
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={con_kumho} alt="금호건설" className="object-contain" />
+            <LazyLoadImage
+              src={con_kumho}
+              alt="금호건설"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img
+            <LazyLoadImage
               src={eng_dohwa}
               alt="도화엔지니어링"
               className="object-contain"
@@ -574,15 +588,23 @@ function Result() {
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={etc_becs} alt="벡스" className="object-contain" />
+            <LazyLoadImage
+              src={etc_becs}
+              alt="벡스"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={loc_seongnam} alt="성남시" className="object-contain" />
+            <LazyLoadImage
+              src={loc_seongnam}
+              alt="성남시"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img
+            <LazyLoadImage
               src={pub_hydro}
               alt="한국수력원자력"
               className="object-contain"
@@ -590,23 +612,39 @@ function Result() {
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={con_hdc} alt="현대산업개발" className="object-contain" />
+            <LazyLoadImage
+              src={con_hdc}
+              alt="현대산업개발"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={eng_yooshin} alt="유신" className="object-contain" />
+            <LazyLoadImage
+              src={eng_yooshin}
+              alt="유신"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={etc_corel} alt="코렐" className="object-contain" />
+            <LazyLoadImage
+              src={etc_corel}
+              alt="코렐"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={loc_hwasung} alt="화성시" className="object-contain" />
+            <LazyLoadImage
+              src={loc_hwasung}
+              alt="화성시"
+              className="object-contain"
+            />
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img
+            <LazyLoadImage
               src={pub_krclean}
               alt="한국농어촌공사"
               className="object-contain"
@@ -614,10 +652,14 @@ function Result() {
           </div>
           <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img src={con_taeyoung} alt="태영건설" className="object-contain" />
+            <LazyLoadImage
+              src={con_taeyoung}
+              alt="태영건설"
+              className="object-contain"
+            />
           </div>
           {/* <div className="flex  justify-center lg:h-[88px]">
-            <img src={eng_dmcm} alt="디엠씨엠" className="object-contain" />
+            <LazyLoadImage src={eng_dmcm} alt="디엠씨엠" className="object-contain" />
           </div> */}
           <div className="text-gray-500">
             <div className="text-[14px] lg:text-[24px] font-semibold ">
@@ -633,7 +675,7 @@ function Result() {
           </div>
           {/* <div className="flex  justify-center lg:h-[88px]">
             {" "}
-            <img
+            <LazyLoadImage
               src={etc_youngpoong}
               alt="영풍건설"
               className="object-contain"
@@ -655,126 +697,126 @@ function Result() {
           <div className="py-6 lg:py-10 px-[20px] lg:w-[1100px] lg:mx-auto ">
             <Slider {...settings} className="">
               <div>
-                <img
+                <LazyLoadImage
                   src={cert19}
                   alt="특허19"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert18}
                   alt="특허18"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert17}
                   alt="특허17"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert16}
                   alt="특허16"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert15}
                   alt="특허15"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert14}
                   alt="특허14"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert13}
                   alt="특허13"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert12}
                   alt="특허12"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert11}
                   alt="특허11"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert10}
                   alt="특허10"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert8}
                   alt="특허8"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert7}
                   alt="특허7"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert6}
                   alt="특허6"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert5}
                   alt="특허5"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert4}
                   alt="특허4"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert3}
                   alt="특허3"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert2}
                   alt="특허2"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={cert1}
                   alt="특허1"
                   className="object-contain px-2 lg:px-5"
@@ -782,7 +824,7 @@ function Result() {
               </div>
 
               <div>
-                <img
+                <LazyLoadImage
                   src={utility1}
                   alt="실용신안1"
                   className="object-contain px-2 lg:px-5"
@@ -790,7 +832,7 @@ function Result() {
               </div>
 
               <div>
-                <img
+                <LazyLoadImage
                   src={design1}
                   alt="디자인1"
                   className="object-contain px-2 lg:px-5"
@@ -798,7 +840,7 @@ function Result() {
               </div>
 
               <div>
-                <img
+                <LazyLoadImage
                   src={design2}
                   alt="디자인2"
                   className="object-contain px-2 lg:px-5"
@@ -1414,105 +1456,105 @@ function Result() {
           <div className="py-6 lg:py-10 px-[20px] lg:w-[1100px] lg:mx-auto ">
             <Slider {...settings} className=" ">
               <div>
-                <img
+                <LazyLoadImage
                   src={inno1}
                   alt="혁신1"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>{" "}
               <div>
-                <img
+                <LazyLoadImage
                   src={inno2}
                   alt="혁신2"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>{" "}
               <div>
-                <img
+                <LazyLoadImage
                   src={purchase1}
                   alt="우수제품1"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>{" "}
               <div>
-                <img
+                <LazyLoadImage
                   src={prize10}
                   alt="수상10"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize10}
                   alt="수상10"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize9}
                   alt="수상9"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize8}
                   alt="수상8"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize7}
                   alt="수상7"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize5}
                   alt="수상5"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize4}
                   alt="수상4"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize3}
                   alt="수상3"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize2}
                   alt="수상2"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={prize1}
                   alt="수상1"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={iso1}
                   alt="iso1"
                   className="object-contain px-2 lg:px-5"
                 />
               </div>
               <div>
-                <img
+                <LazyLoadImage
                   src={iso2}
                   alt="iso2"
                   className="object-contain px-2 lg:px-5"

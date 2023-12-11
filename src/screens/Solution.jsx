@@ -10,7 +10,8 @@ import sinkball from "../assets/img/solution/sinkball.png";
 import smartsheet from "../assets/img/solution/smartsheet.png";
 import sensor from "../assets/img/solution/sensor.png";
 
-// import MyImage from "../libs/MyImage";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import { useRecoilValue } from "recoil";
 import { languageState } from "../recoil/languageState"; // Recoil 상태 파일의 경로를 정확하게 지정하세요.
 import { useTranslation } from "react-i18next";
@@ -40,7 +41,7 @@ function Solution() {
     <div>
       {/* section1. 메인 */}
       <div className="relative ">
-        <img className="w-full" src={bg1} alt="Cowithone" />
+        <LazyLoadImage className="w-full" src={bg1} alt="Cowithone" />
         <div>
           <h1
             className={`absolute top-[30px] md:top-[47px] lg:top-[68px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[${fontSize.base}] md:text-[${fontSize.md}] lg:text-[${fontSize.lg}]`}
@@ -71,7 +72,7 @@ function Solution() {
               </color>
             )}
           </h3>
-          <img
+          <LazyLoadImage
             className="absolute top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  w-8/12 "
             src={undercityCapture}
             alt="Cowithone"
@@ -116,10 +117,14 @@ function Solution() {
           </div>
           <div className="flex flex-col space-y-4">
             {/* <MyImage
-              image={<img src={bps} alt="bps" />}
+              image={<LazyLoadImage src={bps} alt="bps" />}
               className="w-full lg:w-4/6  mx-auto"
             /> */}
-            <img className="w-full lg:w-4/6  mx-auto" src={bps} alt="bps" />
+            <LazyLoadImage
+              className="w-full lg:w-4/6  mx-auto"
+              src={bps}
+              alt="bps"
+            />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
               {t("solution_s3_bps_components")}
             </div>
@@ -140,7 +145,11 @@ function Solution() {
             </div>
           </div>
           <div className="flex flex-col space-y-4">
-            <img className="w-full lg:w-4/6  mx-auto" src={sts} alt="sts" />
+            <LazyLoadImage
+              className="w-full lg:w-4/6  mx-auto"
+              src={sts}
+              alt="sts"
+            />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
               {t("solution_s3_bps_components")},
               <strong className="text-[#4850c9]">
@@ -165,7 +174,11 @@ function Solution() {
             </div>
           </div>
           <div className="flex flex-col space-y-4">
-            <img className="w-full lg:w-4/6  mx-auto" src={psps} alt="psps" />
+            <LazyLoadImage
+              className="w-full lg:w-4/6  mx-auto"
+              src={psps}
+              alt="psps"
+            />
             <div className="mx-auto text-center text-[13px] lg:text-[15px] text-[#454545]">
               {t("solution_s3_bps_components")},
               <strong className="text-[#4850c9]">
@@ -382,7 +395,7 @@ function Solution() {
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-y-10  pt-16">
           <div className="m-auto ">
             <div className="relative mx-auto h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px]  ring-2 ring-[#23297633] rounded-full">
-              <img
+              <LazyLoadImage
                 src={rm5000}
                 alt="Cowithone"
                 className="absolute h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px] object-contain rounded-full top-0 mx-auto left-1/2 -translate-x-1/2	"
@@ -403,7 +416,7 @@ function Solution() {
           </div>
           <div className="m-auto ">
             <div className="relative mx-auto h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px]  ring-2 ring-[#23297633] rounded-full">
-              <img
+              <LazyLoadImage
                 src={rm4000}
                 alt="Cowithone"
                 className="absolute h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px] object-contain rounded-full top-0 mx-auto left-1/2 -translate-x-1/2	"
@@ -424,9 +437,9 @@ function Solution() {
           </div>
           <div className="m-auto ">
             <div className="relative mx-auto h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px]  ring-2 ring-[#23297633] rounded-full">
-              <img
+              <LazyLoadImage
                 src={presheet}
-                alt="Cowithone"
+                alt="스마트예방시트"
                 className="absolute h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px] object-contain rounded-full top-0 mx-auto left-1/2 -translate-x-1/2	"
               />
             </div>
@@ -444,9 +457,9 @@ function Solution() {
           </div>
           <div className="m-auto ">
             <div className="relative mx-auto h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px]  ring-2 ring-[#23297633] rounded-full">
-              <img
+              <LazyLoadImage
                 src={sinkball}
-                alt="Cowithone"
+                alt="싱크볼"
                 className="absolute h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px] object-contain rounded-full top-0 mx-auto left-1/2 -translate-x-1/2	"
               />
             </div>
@@ -464,9 +477,9 @@ function Solution() {
           </div>
           <div className="m-auto ">
             <div className="relative mx-auto h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px]  ring-2 ring-[#23297633] rounded-full">
-              <img
+              <LazyLoadImage
                 src={smartsheet}
-                alt="Cowithone"
+                alt="스마트시트"
                 className="absolute h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px] object-contain rounded-full top-0 mx-auto left-1/2 -translate-x-1/2	"
               />
             </div>
@@ -484,9 +497,9 @@ function Solution() {
           </div>{" "}
           <div className="m-auto ">
             <div className="relative mx-auto h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px]  ring-2 ring-[#23297633] rounded-full">
-              <img
+              <LazyLoadImage
                 src={sensor}
-                alt="Cowithone"
+                alt="누수감지센서"
                 className="absolute h-[120px] w-[120px]  lg:h-[180px] lg:w-[180px] object-contain rounded-full top-0 mx-auto left-1/2 -translate-x-1/2	"
               />
             </div>

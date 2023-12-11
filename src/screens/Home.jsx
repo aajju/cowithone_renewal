@@ -1,6 +1,10 @@
+// import eng_dmcm from "../assets/img/partner/eng_dmcm.png";
 import bps from "../assets/img/solution/bps.png";
+// import bps_en from "../assets/img/solution/bps_en.png";
 import sts from "../assets/img/solution/sts.png";
+// import sts_en from "../assets/img/solution/sts_en.png";
 import psps from "../assets/img/solution/psps.png";
+// import psps_en from "../assets/img/solution/psps_en.png";
 import pub_home from "../assets/img/home/pub_home.png";
 import gover_home from "../assets/img/home/gover_home.png";
 import engneer_home from "../assets/img/home/engneer_home.png";
@@ -16,7 +20,6 @@ import loc_hwasung from "../assets/img/partner/loc_hwasung.png";
 import con_kumho from "../assets/img/partner/con_kumho.png";
 import con_hdc from "../assets/img/partner/con_hdc.png";
 import con_taeyoung from "../assets/img/partner/con_taeyoung.png";
-// import eng_dmcm from "../assets/img/partner/eng_dmcm.png";
 import eng_dohwa from "../assets/img/partner/eng_dohwa.png";
 import eng_yooshin from "../assets/img/partner/eng_yooshin.png";
 import etc_becs from "../assets/img/partner/etc_becs.png";
@@ -34,6 +37,8 @@ import { Link } from "react-router-dom";
 //   DocumentTextIcon,
 //   HandThumbUpIcon,
 // } from "@heroicons/react/24/solid";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -131,7 +136,7 @@ function Home() {
     <div className="">
       {/* section1. 메인 */}
       <div className="relative ">
-        <img className="w-full" src={bg1} alt="Cowithone" />
+        <LazyLoadImage className="w-full" src={bg1} alt="Cowithone" />
         <div>
           <h1
             className={`absolute top-[40px] md:top-[66px] lg:top-[88px] left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center font-bold text-[${fontSize.base}] md:text-[${fontSize.md}] lg:text-[${fontSize.lg}]`}
@@ -140,12 +145,12 @@ function Home() {
             {t("home_title1")}
             <br /> {t("home_title2")}
           </h1>
-          <img
+          <LazyLoadImage
             className="absolute  bottom-0 left-1/2 -translate-x-1/2  w-full "
             src={frame}
             alt="frame"
           />
-          {/* <img
+          {/* <LazyLoadImage
             className="absolute opacity-90 top-[100px] md:top-[160px] lg:top-[200px] left-1/2 -translate-x-1/2  w-8/12 "
             src={undercityCapture}
             alt="Cowithone"
@@ -228,7 +233,26 @@ function Home() {
               </div>
             </div>
             <div className="flex-1 pt-6 lg:pt-0 pb-6">
-              <img className="object-scale-down w-full" src={bps} alt="BPS" />
+              <LazyLoadImage
+                className="object-scale-down w-full"
+                src={bps}
+                alt="BPS"
+              />
+              {/* {isKorean ? (
+                <LazyLoadImage
+                  className="object-scale-down w-full"
+                  src={bps}
+                  alt="BPS"
+                />
+              ) : (
+                <>
+                  <LazyLoadImage
+                    className="object-scale-down w-full"
+                    src={bps_en}
+                    alt="BPS"
+                  />
+                </>
+              )} */}
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-between ">
@@ -242,7 +266,11 @@ function Home() {
               </div>
             </div>
             <div className=" py-6 lg:pt-0 lg:pl-52  lg:w-2/3 ">
-              <img className="object-scale-down w-full" src={sts} alt="BPS" />
+              <LazyLoadImage
+                className="object-scale-down w-full"
+                src={sts}
+                alt="BPS"
+              />
             </div>
           </div>
           <div className="flex flex-col lg:flex-row justify-between ">
@@ -256,7 +284,11 @@ function Home() {
               </div>
             </div>
             <div className="flex-1 pt-6 lg:pt-0 ">
-              <img className="object-scale-down w-full" src={psps} alt="PSPS" />
+              <LazyLoadImage
+                className="object-scale-down w-full"
+                src={psps}
+                alt="PSPS"
+              />
             </div>
           </div>
         </div>
@@ -280,7 +312,7 @@ function Home() {
         <div className="flex flex-col lg:flex-row gap-x-4">
           <div className="flex-1 ">
             <div className="flex flex-col justify-between items-center">
-              <img
+              <LazyLoadImage
                 className="object-fill "
                 src={engneer_home}
                 alt="엔지니어링"
@@ -308,7 +340,11 @@ function Home() {
           </div>
           <div className="flex-1 ">
             <div className="flex flex-col justify-between items-center">
-              <img className="object-fill " src={gover_home} alt="지자체" />
+              <LazyLoadImage
+                className="object-fill "
+                src={gover_home}
+                alt="지자체"
+              />
             </div>
             <div className="text-center pt-4 font-semibold text-[18px] lg:text-[20px]">
               {t("home_s3_government")}
@@ -329,7 +365,11 @@ function Home() {
           </div>
           <div className="flex-1 ">
             <div className="flex flex-col justify-between items-center">
-              <img className="object-fill " src={pub_home} alt="공공기관" />
+              <LazyLoadImage
+                className="object-fill "
+                src={pub_home}
+                alt="공공기관"
+              />
             </div>
             <div className="text-center pt-4 font-semibold text-[18px] lg:text-[20px]">
               {t("home_s3_publicinstitutions")}
@@ -377,297 +417,142 @@ function Home() {
 
         <Slider {...settings} className="px-[20px] ">
           <div>
-            <img
+            <LazyLoadImage
               src={loc_namyangju}
-              alt="특허1"
+              alt="남양주시"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={loc_songpa}
-              alt="특허1"
+              alt="송파구청"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={loc_seongnam}
-              alt="특허1"
+              alt="성남시청"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={loc_hwasung}
-              alt="특허1"
+              alt="화성시청"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={pub_kwater}
-              alt="특허1"
+              alt="수자원공사"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={pub_lh}
-              alt="특허1"
+              alt="lh"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={pub_hydro}
-              alt="특허1"
+              alt="한수원"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={pub_krclean}
-              alt="특허1"
+              alt="농어촌공사"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={con_kukdong}
-              alt="특허1"
+              alt="극동건설"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={con_hdc}
-              alt="특허1"
+              alt="현대건설"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={con_kumho}
-              alt="특허1"
+              alt="금호건설"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={con_taeyoung}
-              alt="특허1"
+              alt="태영건설"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={eng_kunhwa}
-              alt="특허1"
+              alt="건화"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={eng_dohwa}
-              alt="특허1"
+              alt="도화"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           <div>
-            <img
+            <LazyLoadImage
               src={eng_yooshin}
-              alt="특허1"
+              alt="유신"
               className="object-contain px-2 lg:px-5"
             />
           </div>
           {/* <div>
-            <img
+            <LazyLoadImage
               src={eng_dmcm}
               alt="특허1"
               className="object-contain px-2 lg:px-5"
             />
           </div> */}
           <div>
-            <img
-              src={etc_movements}
-              alt="특허1"
-              className="object-contain px-2 lg:px-5"
-            />
-          </div>
-          <div>
-            <img
-              src={etc_becs}
-              alt="특허1"
-              className="object-contain px-2 lg:px-5"
-            />
-          </div>
-          <div>
-            <img
-              src={etc_corel}
-              alt="특허1"
-              className="object-contain px-2 lg:px-5"
-            />
-          </div>
-          {/* <div>
-            <img
-              src={etc_youngpoong}
-              alt="특허1"
-              className="object-contain px-2 lg:px-5"
-            />
-          </div> */}
-        </Slider>
-      </div>
-      {/* <div className="flex flex-col pb-10 lg:pb-24 text-center">
-        <div className="px-[20px] lg:px-72  font-semibold text-[30px] lg:text-[40px]">
-          파트너
-        </div>
-        <div className="px-[4px] lg:px-72  pt-6 lg:pt-8 grid grid-cols-5  items-center  gap-4 gap-y-6 lg:gap-y-8  text-[12px] lg:text-[20px] ">
-          <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2 ">
-            <div>
-              <BuildingLibraryIcon className="w-5 h-5 lg:w-10 lg:h-10  mx-auto" />
-            </div>
-            <div>지자체</div>
-          </div>
-          <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
-            <div>
-              <BuildingOffice2Icon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
-            </div>
-            <div>공공기관</div>
-          </div>
-          <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
-            <div>
-              <TruckIcon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
-            </div>
-            <div>건설사</div>
-          </div>
-          <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
-            <div>
-              <DocumentTextIcon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
-            </div>
-            <div>엔지니어링</div>
-          </div>
-          <div className="text-center pt-4 lg:py-4  flex-cols items-center space-y-2">
-            <div>
-              <HandThumbUpIcon className="w-5 h-5 lg:w-10 lg:h-10 mx-auto" />
-            </div>
-            <div>협력업체</div>
-          </div>
-          <div className="flex  justify-center lg:h-[88px]  ">
-            <img
-              src={loc_namyangju}
-              alt="남양주시"
-              className="object-contain"
-            />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            <img
-              src={pub_kwater}
-              alt="한국수자원공사"
-              className="object-contain"
-            />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            <img src={con_kukdong} alt="극동건설" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            <img
-              src={eng_kunhwa}
-              alt="건화엔지니어링"
-              className="object-contain"
-            />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            <img
+            <LazyLoadImage
               src={etc_movements}
               alt="무브먼츠"
-              className="object-contain"
+              className="object-contain px-2 lg:px-5"
             />
           </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            <img src={loc_songpa} alt="송파구청" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img
-              src={pub_lh}
-              alt="한국토지주택공사"
-              className="object-contain"
+          <div>
+            <LazyLoadImage
+              src={etc_becs}
+              alt="벡스"
+              className="object-contain px-2 lg:px-5"
             />
           </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={con_kumho} alt="금호건설" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img
-              src={eng_dohwa}
-              alt="도화엔지니어링"
-              className="object-contain"
+          <div>
+            <LazyLoadImage
+              src={etc_corel}
+              alt="코렐"
+              className="object-contain px-2 lg:px-5"
             />
           </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={etc_becs} alt="벡스" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={loc_seongnam} alt="성남시" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img
-              src={pub_hydro}
-              alt="한국수력원자력"
-              className="object-contain"
-            />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={con_hdc} alt="현대산업개발" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={eng_yooshin} alt="유신" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={etc_corel} alt="코렐" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={loc_hwasung} alt="화성시" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img
-              src={pub_krclean}
-              alt="한국농어촌공사"
-              className="object-contain"
-            />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={con_taeyoung} alt="태영건설" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img src={eng_dmcm} alt="디엠씨엠" className="object-contain" />
-          </div>
-          <div className="flex  justify-center lg:h-[88px]">
-            {" "}
-            <img
-              src={etc_youngpoong}
-              alt="영풍건설"
-              className="object-contain"
-            />
-          </div>
-        </div>
-      </div> */}
+        </Slider>
+      </div>
       {/* section6 */}
       <div>
-        {" "}
         <div className="px-[20px] lg:px-52 bg-[#f4f4f4] py-10 lg:py-20">
           <div>
             <div className="text-[18px] lg:text-[30px] text-[#232976] font-semibold">
