@@ -165,7 +165,7 @@ function Boryeong12() {
   return (
     <div className="m-4 text-2xl">
       <div className="space-y-2">
-        <div className="font-semibold">지티삼거리</div>
+        <div className="font-semibold">지우교~은해교</div>
         {Object.entries(checkboxes).map(([key, value], index) => (
           <label key={index} className="flex items-center cursor-pointer">
             <input
