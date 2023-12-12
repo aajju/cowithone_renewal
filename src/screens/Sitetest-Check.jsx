@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import Boryeong11 from "../Components/Boryeong11_check";
-import Boryeong12 from "../Components/Boryeong12_check";
-import Boryeong13 from "../Components/Boryeong13_check";
-import Boryeong14 from "../Components/Boryeong14_check";
+import Boryeong2ch from "../Components/Boryeong_2ch";
+import Boryeong4ch from "../Components/Boryeong_4ch";
 
 function SitetestCheck() {
   return (
     <div className="m-4">
       <div className="space-y-10 flex-col text-lg">
-        <Boryeong11 />
-        <Boryeong12 />
-        <Boryeong13 />
-        <Boryeong14 />
+        <Boryeong2ch siteId={"boryeong11"} distance={465} siteName={"율암교"} />
+        <Boryeong4ch
+          siteId={"boryeong12"}
+          distance={750}
+          siteName={"지우교~은해교"}
+        />
+        <Boryeong2ch
+          siteId={"boryeong13"}
+          distance={305}
+          siteName={"sk주유소"}
+        />
+        <Boryeong4ch
+          siteId={"boryeong14"}
+          distance={760}
+          siteName={"지티삼거리"}
+        />
       </div>
       {/* 설명 */}
       <div className="flex-col text-lg  space-y-4 mt-10">

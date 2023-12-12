@@ -455,7 +455,7 @@ function Sitetest() {
             <h1 className="pr-2 text-xl">AC전원 : </h1>
             <div className="flex gap-3 ">
               <button
-                className="bg-slate-300 px-3 lg:px-3 lg:px-10 py-3"
+                className="bg-slate-300 px-3 lg:px-10 py-3"
                 onClick={() =>
                   sendMessageWithParams(
                     messages.boryeong14_start_ch1,
@@ -571,7 +571,7 @@ function Sitetest() {
             세팅{" "}
           </div>
           <div>
-            * (주의) ac전원 ch1 클릭한뒤, 점검구 ch2 클릭하면 --> 점검구 ch2만
+            * (주의) ac전원 ch1 클릭한뒤, 점검구 ch2 클릭하면 → 점검구 ch2만
             비정상..(ac전원 ch1은 정상)
           </div>
 
@@ -581,7 +581,7 @@ function Sitetest() {
           </div>
 
           <div>
-            채널4개 구간에서.. 채널1이랑 채널3 끊어서 보여주세요 --> 못보여줌
+            채널4개 구간에서.. 채널1이랑 채널3 끊어서 보여주세요 → 못보여줌
           </div>
         </div>
         <Link to={"/sitetest-check"}>
