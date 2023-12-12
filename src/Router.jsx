@@ -11,6 +11,7 @@ import { languageState } from "./recoil/languageState";
 import { useRecoilState } from "recoil";
 import { changeLanguage } from "./i18n";
 import Sitetest from "./screens/Sitetest";
+import SitetestCheck from "./screens/Sitetest-Check";
 
 // element 함수를 React function component로 변경합니다.
 function Element() {
@@ -64,6 +65,10 @@ const router = createBrowserRouter(
         {
           path: "sitetest",
           element: <Sitetest />,
+        },
+        {
+          path: "sitetest-check",
+          element: <SitetestCheck />,
         },
         // 특정 URL 만들기
         {

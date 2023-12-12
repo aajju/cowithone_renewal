@@ -222,7 +222,7 @@ function Sitetest() {
             <h1 className="pr-2 text-xl">AC전원 : </h1>
             <div className="flex gap-3 ">
               <button
-                className="bg-slate-300 px-3 lg:px-3 lg:px-10 py-3"
+                className="bg-slate-300 px-3 lg:px-10 py-3"
                 onClick={() =>
                   sendMessageWithParams(
                     messages.boryeong12_start_ch1,
@@ -589,3 +589,70 @@ function Sitetest() {
 }
 
 export default Sitetest;
+
+// <XML>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>1</chNum>
+//     <detNum>1</detNum>
+//     <status>1</status>
+//     <distance>0</distance>
+//     <btAmt>22.84</btAmt>
+//   </detector>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>2</chNum>
+//     <detNum>1</detNum>
+//     <status>1</status>
+//     <distance>0</distance>
+//     <btAmt>22.84</btAmt>
+//   </detector>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>3</chNum>
+//     <detNum>1</detNum>
+//     <status>1</status>
+//     <distance>0</distance>
+//     <btAmt>22.84</btAmt>
+//   </detector>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>4</chNum>
+//     <detNum>1</detNum>
+//     <status>1</status>
+//     <distance>0</distance>
+//     <btAmt>22.84</btAmt>
+//   </detector>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>1</chNum>
+//     <detNum>2</detNum>
+//     <status>2</status>
+//     <distance>0</distance>
+//     <btAmt>0</btAmt>
+//   </detector>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>2</chNum>
+//     <detNum>2</detNum>
+//     <status>1</status>
+//     <distance>0</distance>
+//     <btAmt>22.84</btAmt>
+//   </detector>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>3</chNum>
+//     <detNum>2</detNum>
+//     <status>1</status>
+//     <distance>0</distance>
+//     <btAmt>22.84</btAmt>
+//   </detector>
+//   <detector>
+//     <siteId>boryeong12</siteId>
+//     <chNum>4</chNum>
+//     <detNum>2</detNum>
+//     <status>1</status>
+//     <distance>0</distance>
+//     <btAmt>22.84</btAmt>
+//   </detector>
+// </XML>;
