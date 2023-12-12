@@ -19,7 +19,7 @@ function Boryeong12() {
       key || valueArr[index + 4] ? 2 : 1
     );
     const distance = valueArr.map((_, index) =>
-      valueArr[index + 4] ? 750 : 0
+      !valueArr[index] && valueArr[index + 4] ? 750 : 0
     );
     const btAmt = valueArr.map((key, index) =>
       key || valueArr[index + 4] ? 0 : 22.84
