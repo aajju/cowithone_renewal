@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Sitetest() {
   const [boryeong11_msg, setBoryeong11Msg] = useState("클릭 없음"); // 클릭된 버튼 정보 상태값으로 저장
@@ -583,76 +584,14 @@ function Sitetest() {
             채널4개 구간에서.. 채널1이랑 채널3 끊어서 보여주세요 --> 못보여줌
           </div>
         </div>
+        <Link to={"/sitetest-check"}>
+          <div className="bg-orange-400 w-full p-4 text-center mt-10 text-white text-xl">
+            커스텀 페이지로 이동
+          </div>
+        </Link>
       </div>
     </div>
   );
 }
 
 export default Sitetest;
-
-// <XML>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>1</chNum>
-//     <detNum>1</detNum>
-//     <status>1</status>
-//     <distance>0</distance>
-//     <btAmt>22.84</btAmt>
-//   </detector>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>2</chNum>
-//     <detNum>1</detNum>
-//     <status>1</status>
-//     <distance>0</distance>
-//     <btAmt>22.84</btAmt>
-//   </detector>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>3</chNum>
-//     <detNum>1</detNum>
-//     <status>1</status>
-//     <distance>0</distance>
-//     <btAmt>22.84</btAmt>
-//   </detector>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>4</chNum>
-//     <detNum>1</detNum>
-//     <status>1</status>
-//     <distance>0</distance>
-//     <btAmt>22.84</btAmt>
-//   </detector>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>1</chNum>
-//     <detNum>2</detNum>
-//     <status>2</status>
-//     <distance>0</distance>
-//     <btAmt>0</btAmt>
-//   </detector>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>2</chNum>
-//     <detNum>2</detNum>
-//     <status>1</status>
-//     <distance>0</distance>
-//     <btAmt>22.84</btAmt>
-//   </detector>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>3</chNum>
-//     <detNum>2</detNum>
-//     <status>1</status>
-//     <distance>0</distance>
-//     <btAmt>22.84</btAmt>
-//   </detector>
-//   <detector>
-//     <siteId>boryeong12</siteId>
-//     <chNum>4</chNum>
-//     <detNum>2</detNum>
-//     <status>1</status>
-//     <distance>0</distance>
-//     <btAmt>22.84</btAmt>
-//   </detector>
-// </XML>;
