@@ -1,24 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Boryeong2ch from "../Components/Boryeong_2ch";
-import Boryeong4ch from "../Components/Boryeong_4ch";
+import Fieldtest2ch1det from "../Components/\bFieldtest_2ch_1det";
+import Fieldtest4ch2det from "../Components/Fieldtest_4ch_2det";
 
 function SitetestCheck() {
   return (
     <div className="m-4">
       <div className="space-y-10 flex-col text-lg">
-        <Boryeong2ch siteId={"boryeong11"} distance={465} siteName={"율암교"} />
-        <Boryeong4ch
+        <Fieldtest2ch1det
+          siteId={"boryeong11"}
+          distance={465}
+          siteName={"율암교"}
+        />
+        <Fieldtest4ch2det
           siteId={"boryeong12"}
           distance={750}
           siteName={"지우교~은해교"}
         />
-        <Boryeong2ch
+        <Fieldtest2ch1det
           siteId={"boryeong13"}
           distance={305}
           siteName={"sk주유소"}
         />
-        <Boryeong4ch
+        <Fieldtest4ch2det
           siteId={"boryeong14"}
           distance={760}
           siteName={"지티삼거리"}

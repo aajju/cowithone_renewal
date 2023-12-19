@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { arrayToString, sendMessage } from "./\butils";
 
-function Boryeong2ch(props) {
+function Fieldtest2ch1det(props) {
   const { siteId, distance, siteName } = props;
   const keyArray = [];
   const valueArr = [];
@@ -102,4 +102,4 @@ function Boryeong2ch(props) {
   );
 }
 
-export default Boryeong2ch;
+export default Fieldtest2ch1det;
