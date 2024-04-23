@@ -452,7 +452,7 @@ const resources = {
       result_s4_patent_t_r12_3:
         "Leak Detection Sheet and Leak Detection Device Using the Same",
 
-      result_s4_patent_t_r13_2: "No. 10-0908137",
+      result_s4_patent_t_r13_2: "No. 10-1946956",
       result_s4_patent_t_r13_3: "Cavity Detection Sensor",
 
       result_s4_patent_t_r14_2: "No. 10-1971473",
@@ -475,7 +475,7 @@ const resources = {
       result_s4_patent_t_r18_3:
         "Underground Pipes Damage Prevention Sheet and Its Manufacturing Method",
 
-      result_s4_patent_t_r19_2: "No. 10-0908137",
+      result_s4_patent_t_r19_2: "No. 10-2322701",
       result_s4_patent_t_r19_3:
         "Field-Intelligent Underground Facility Safety Management Device and Method Using UF Code Pad Unit and Underground Pipes Measurement AI Robot Module",
 
@@ -532,6 +532,9 @@ const resources = {
       result_s5_t_r3_2:
         "Innovative Product (SinkTree System Incorporating AR Technology to Prevent Sinkholes)",
       result_s5_t_r3_3: "Ministry of SMEs and Startups (South Korea)",
+
+      result_s5_t_r4_new2: "K-water registration technology",
+      result_s5_t_r4_new3: "K-WATER",
 
       // result_s5_t_r4_2: "",
       result_s5_t_r4_3: "KIC",
@@ -1238,7 +1241,7 @@ const resources = {
       result_s4_patent_t_r12_2: "제 10-1898447호",
       result_s4_patent_t_r12_3: "누수 감지시트 및 그를 이용한 누수감지장치",
 
-      result_s4_patent_t_r13_2: "제 10-0908137호",
+      result_s4_patent_t_r13_2: "제 10-1946956호",
       result_s4_patent_t_r13_3: "동공감지센서",
 
       result_s4_patent_t_r14_2: "제 10-1971473호",
@@ -1258,7 +1261,7 @@ const resources = {
       result_s4_patent_t_r18_2: "제 10-2139816호",
       result_s4_patent_t_r18_3: "지하시설물 파손예방시트 및 그의 제조방법",
 
-      result_s4_patent_t_r19_2: "제 10-0908137호",
+      result_s4_patent_t_r19_2: "제 10-2322701호",
       result_s4_patent_t_r19_3:
         "UF코드패드부와 지하시설물 측정용 AI로봇모듈을 통한 현장지능형 지하시설물 안전관리장치 및 방법",
 
@@ -1312,6 +1315,9 @@ const resources = {
       result_s5_t_r3_2:
         "혁신제품 (싱크홀을 예방하는 AR기술을 접목한 SinkTree시스템)",
       result_s5_t_r3_3: "중소벤처기업부",
+
+      result_s5_t_r4_new2: "K-water 등록기술",
+      result_s5_t_r4_new3: "한국수자원공사",
 
       // result_s5_t_r4_2: "",
       result_s5_t_r4_3: "한국국제규격인증원",

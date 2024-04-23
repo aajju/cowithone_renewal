@@ -48,11 +48,12 @@ import prize7 from "../assets/img/prize/prize7.png";
 import prize8 from "../assets/img/prize/prize8.png";
 import prize9 from "../assets/img/prize/prize9.png";
 import prize10 from "../assets/img/prize/prize10.png";
-import inno1 from "../assets/img/prize/inno1.jpg";
+import inno1 from "../assets/img/prize/inno1.png";
 import inno2 from "../assets/img/prize/inno2.png";
 import iso1 from "../assets/img/prize/iso1.png";
 import iso2 from "../assets/img/prize/iso2.png";
 import purchase1 from "../assets/img/prize/purchase1.png";
+import kwater_prize from "../assets/img/prize/kwater_prize.png";
 
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -1170,7 +1171,7 @@ function Result() {
                       {t("result_s4_patent_t_r7_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
-                      {t("result_s4_patent_t_r7_23")}
+                      {t("result_s4_patent_t_r7_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
@@ -1179,7 +1180,7 @@ function Result() {
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
                       {" "}
-                      {t("result_s4_patent_t_r8_23")}
+                      {t("result_s4_patent_t_r8_3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100 ">
@@ -1271,6 +1272,7 @@ function Result() {
                       {t("result_s4_patent_t_r19_3")}
                     </td>
                   </tr>
+
                   <tr className="border-b bg-white odd:bg-gray-100 ">
                     <td className="px-2 py-2 lg:p-4 border-r">
                       {t("result_s4_patent_t_r20_2")}{" "}
@@ -1471,6 +1473,13 @@ function Result() {
               </div>{" "}
               <div>
                 <LazyLoadImage
+                  src={kwater_prize}
+                  alt="수자원등록기술"
+                  className="object-contain px-2 lg:px-5"
+                />
+              </div>{" "}
+              <div>
+                <LazyLoadImage
                   src={purchase1}
                   alt="우수제품1"
                   className="object-contain px-2 lg:px-5"
@@ -1612,6 +1621,17 @@ function Result() {
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
                       {t("result_s5_t_certifi")}
                     </td>
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r4_new2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s5_t_r4_new3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
+                      {t("result_s5_t_certifi")}
+                    </td>
                     <td className="px-2 py-2 lg:p-4 border-r">ISO 9001:2015</td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
                       {t("result_s5_t_r4_3")}
@@ -1641,10 +1661,9 @@ function Result() {
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">
                     <td className="pl-2 py-2 lg:pl-4 lg:pt-4 align-top border-r font-semibold">
-                      {t("result_s5_t_certifi")}
+                      {t("result_s5_t_awards")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r">
-                      {" "}
                       {t("result_s5_t_r7_2")}
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
@@ -1780,6 +1799,14 @@ function Result() {
                     </td>
                     <td className="px-2 py-2 lg:p-4 border-r ">
                       {t("result_s5_t_r3_3")}
+                    </td>
+                  </tr>
+                  <tr className="border-b bg-white odd:bg-gray-100  ">
+                    <td className="px-2 py-2 lg:p-4 border-r">
+                      {t("result_s5_t_r4_new2")}
+                    </td>
+                    <td className="px-2 py-2 lg:p-4 border-r ">
+                      {t("result_s5_t_r4_new3")}
                     </td>
                   </tr>
                   <tr className="border-b bg-white odd:bg-gray-100  ">

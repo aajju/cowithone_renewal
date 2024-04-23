@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Sitetest() {
+  const [songpa03_msg, setSongpa03Msg] = useState("클릭 없음"); // 클릭된 버튼 정보 상태값으로 저장
+
   const [boryeong11_msg, setBoryeong11Msg] = useState("클릭 없음"); // 클릭된 버튼 정보 상태값으로 저장
   const [boryeong12_msg, setBoryeong12Msg] = useState("클릭 없음"); // 클릭된 버튼 정보 상태값으로 저장
   const [boryeong13_msg, setBoryeong13Msg] = useState("클릭 없음"); // 클릭된 버튼 정보 상태값으로 저장
@@ -32,6 +34,11 @@ function Sitetest() {
   };
 
   const messages = {
+    songpa03_ok: `<XML><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>2</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>3</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector></XML>`,
+    songpa03_det1: `<XML><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>2</detNum><status>2</status><distance>0</distance><btAmt>0</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>3</detNum><status>2</status><distance>0</distance><btAmt>0</btAmt></detector></XML>`,
+    songpa03_det2: `<XML><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>2</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>3</detNum><status>2</status><distance>0</distance><btAmt>0</btAmt></detector></XML>`,
+    songpa03_det3: `<XML><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>2</detNum><status>1</status><distance>955</distance><btAmt>22.84</btAmt></detector><detector><siteId>songpa03</siteId><chNum>1</chNum><detNum>3</detNum><status>2</status><distance>0</distance><btAmt>0</btAmt></detector></XML>`,
+
     boryeong11_ok: `<XML><detector><siteId>boryeong11</siteId><chNum>1</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>boryeong11</siteId><chNum>2</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector></XML>`,
     boryeong11_start_ch1: `<XML><detector><siteId>boryeong11</siteId><chNum>1</chNum><detNum>1</detNum><status>2</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>boryeong11</siteId><chNum>2</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector></XML>`,
     boryeong11_start_ch2: `<XML><detector><siteId>boryeong11</siteId><chNum>1</chNum><detNum>1</detNum><status>1</status><distance>0</distance><btAmt>22.84</btAmt></detector><detector><siteId>boryeong11</siteId><chNum>2</chNum><detNum>1</detNum><status>2</status><distance>0</distance><btAmt>22.84</btAmt></detector></XML>`,
@@ -74,6 +81,10 @@ function Sitetest() {
       await sendMessage(message);
 
       switch (site) {
+        case "songpa03":
+          setSongpa03Msg(additionalParam);
+          break;
+
         case "boryeong11":
           setBoryeong11Msg(additionalParam);
           break;
@@ -98,6 +109,66 @@ function Sitetest() {
   return (
     <div className="flex justify-center items-center px-2">
       <div className="flex-col justify-center items-center">
+        {/* 송파현장 */}
+        <div className="my-[50px] mt-[10px]  lg:px-[150px] flex-col ">
+          <div className="flex items-center gap-6">
+            <div className="text-3xl font-bold">송파현장</div>
+            <button
+              className="bg-slate-800 text-white px-6 lg:px-20 py-3"
+              onClick={() =>
+                sendMessageWithParams(messages.songpa03_ok, "ok", "songpa03")
+              }
+            >
+              ok
+            </button>
+          </div>
+          <div className="flex items-center pt-4">
+            <h1 className="pr-2 text-xl">테스트위치 : </h1>
+            <div className="flex gap-3 ">
+              <button
+                className="bg-slate-300 px-3 lg:px-10 py-3"
+                onClick={() =>
+                  sendMessageWithParams(
+                    messages.songpa03_det1,
+                    "AC 장비",
+                    "songpa03"
+                  )
+                }
+              >
+                AC 장비
+              </button>
+              <button
+                className="bg-slate-300 px-3 lg:px-10"
+                onClick={() =>
+                  sendMessageWithParams(
+                    messages.songpa03_det2,
+                    "태양광1",
+                    "songpa03"
+                  )
+                }
+              >
+                태양광1
+              </button>{" "}
+              <button
+                className="bg-slate-300 px-3 lg:px-10"
+                onClick={() =>
+                  sendMessageWithParams(
+                    messages.songpa03_det3,
+                    "태양광2",
+                    "songpa03"
+                  )
+                }
+              >
+                태양광2
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-6 font-semibold text-red-500">
+            최근클릭 : {songpa03_msg}
+          </div>
+        </div>
+
         {/* 율암교 */}
         <div className="my-[50px] mt-[10px]  lg:px-[150px] flex-col ">
           <div className="flex items-center gap-6">
